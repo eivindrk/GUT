@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(154, 153, 153); */
+}
+
+p {
+    font-family: "League Spartan", serif;
+    font-style: normal;
+    font-size: x-large;
+}
