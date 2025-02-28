@@ -1,1 +1,11 @@
 U can download fonts from Google fonts and paste the code into the header element. 
+
+position: fixed, makes the image stay even if you scroll! 
+
+Link til gode icons: https://www.iconpacks.net/free-icon/black-apple-music-logo-24976.html
+
+Useful code:
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
