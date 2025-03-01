@@ -12,7 +12,15 @@
     object-fit: cover;
 }
 
-.header {
+.left-section {
+    background-color: lightblue;
+}
+
+.mid-section {
+    background-color: lightpink;
+}
+
+.GUT-logo {
     position:absolute;
     top: 13%;
     left: 50%;
@@ -24,6 +32,10 @@
     opacity: 90%;
     letter-spacing: 5px;
     text-shadow: 4px 4px 4px #3433334c;
+}
+
+.right-section {
+    background-color: lightblue;
 }
 
 .social-media-container {
@@ -49,12 +61,15 @@
     display: grid;
     background-image: linear-gradient(180deg, white , gray); 
     grid-template-columns: 1fr 30% 3fr 1fr;
+    column-gap: 30px;
     padding-top: 25px;
     padding-bottom: 50px;
 }
 
 .single-picture {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition-duration: 50ms;
 }
 
@@ -67,13 +82,10 @@
     font-size: 60px;
     font-family: "Bebas Neue", Arial;
     color: black;
-    margin-top: 20px;
 }
 
-.single-header, .single-text, .biografi-text, .biografi-header {
+.single-text, .biografi-text {
     margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .biografi-container {
@@ -82,6 +94,7 @@
     grid-template-columns: 1fr 3fr 30% 1fr;
     padding-top: 25px;
     padding-bottom: 50px;
+    column-gap: 30px;
 }
 
 .biografi-picture {

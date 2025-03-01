@@ -9,4 +9,13 @@ p {
     font-family: "League Spartan", serif;
     font-style: normal;
     font-size: x-large;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: gray;
 }

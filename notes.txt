@@ -10,3 +10,4 @@ Useful code:
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+For domain name: namecheap
