@@ -2,7 +2,9 @@ U can download fonts from Google fonts and paste the code into the header elemen
 
 position: fixed, makes the image stay even if you scroll! 
 
-Link til gode icons: https://www.iconpacks.net/free-icon/black-apple-music-logo-24976.html
+Link til gode icons: 
+- https://www.iconpacks.net/free-icon/black-apple-music-logo-24976.html
+- https://www.svgrepo.com/svg/473667/itunes
 
 Useful code:
 .wrapper {

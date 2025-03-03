@@ -1,8 +1,8 @@
 .header {
     position: absolute;
-    top: 0%;
+    top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     align-items: center;
     width: 100%;
@@ -16,9 +16,9 @@
 }
 
 .menu-tab {
-    color: black;
+    color: white;
     font-family: "Bebas Neue", Arial;
-    font-size: 35px;
+    font-size: 30px;
     margin-right: 20px;
     transition-duration: 50ms;
 }
@@ -35,7 +35,7 @@
 .header-text {
     font-size: 9vw;
     font-family: "Bebas Neue", Arial;
-    color: black;
+    color: white;
     font-weight: 800;
     margin-top: 10px;
 }
@@ -47,13 +47,17 @@
     margin-right: 40px;
 }
 
-.social-media-logos {
-    width: 50px;
-    opacity: 60%;
+.social-media-logos, .social-media-logos-am {
+    width: 30px;
+    opacity: 100%;
     transition-duration: 50ms;
-    margin-right: 20px;
+    margin-left: 1.5vw;
 }
 
-.social-media-logos:hover {
-    opacity: 100%;
+.social-media-logos-am {
+    border-radius: 50%;
+}
+
+.social-media-logos:hover, .social-media-logos-am:hover {
+    opacity: 70%;
 }
