@@ -2,8 +2,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
-    align-items: center;
+    align-items: top;
+    padding-top: 10px
     /* background-image: linear-gradient(0deg, white , gray); */
+}
+
+.header-left, .header-right {
+    padding-top: 15px;
 }
 
 .header-left {
@@ -34,7 +39,6 @@
     font-family: "Bebas Neue", Arial;
     color: black;
     font-weight: 800;
-    margin-top: 10px;
 }
 
 .header-right {
@@ -45,12 +49,12 @@
 }
 
 .social-media-logos {
-    width: 50px;
-    opacity: 60%;
+    width: 35px;
+    opacity: 100%;
     transition-duration: 50ms;
-    margin-right: 20px;
+    margin-left: 1.5vw;
 }
 
 .social-media-logos:hover {
-    opacity: 100%;
+    opacity: 70%;
 }

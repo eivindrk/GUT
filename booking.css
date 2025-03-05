@@ -21,6 +21,9 @@
 
 .booking-decoration {
     height: 20vw;
+    min-height: 150px;
+    margin-bottom: 200px;
+    margin-top: 200px;
 }
 
 .booking-img {

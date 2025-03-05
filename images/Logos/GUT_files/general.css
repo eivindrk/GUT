@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(154, 153, 153); */
+}
+
+p {
+    font-family: "League Spartan", serif;
+    font-style: normal;
+    font-size: 22px;
+    margin: 0px;
+    line-height: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: gray;
+}

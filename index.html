@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="header-index.css">
+    <link rel="stylesheet" href="bottom-element.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
@@ -19,18 +20,24 @@
 </head>
 
 <body>
+
     <div class="header-image">
-        <img class="hovedbilde" src="images/Bandbilde4.jpeg">
+    <!-- <div class="header-image2"> -->
+        <picture>
+            <source media="(max-width: 1000px)" srcset="images/Header-pic.png">
+            <img class="hovedbilde" src="images/Bandbilde4.jpeg">
+        </picture>
         <!-- <img class="hovedbilde2" src="images/Header-pic.png"> -->
-        <div class="mid-section">
-            <p class="GUT-logo">GUT</p>
-        </div> 
     </div>
+
+    <div class="mid-section">
+        <p class="GUT-logo">GUT</p>
+    </div> 
 
     <div class="header">
         <div class="header-left">
             <a class="menu-tab" href="index.html">
-                HOME
+                <u>HJEM</u>
             </a>
             <a class="menu-tab" href="booking.html">
                 BOOKING
@@ -57,77 +64,38 @@
         </div>
     </div>
 
-    <div class="menu-and-some">
-        <div class="menu">
-            <button class="menu-buttons" onclick="location.href='booking.html'">
-                BOOKING
-            </button>
-            <button class="menu-buttons" onclick="location.href='bio.html'">
-                BIO
-            </button>
-            <button class="menu-buttons" onclick="location.href='ordboka.html'">
-                ORDBOKA
-            </button>
+    <div class="single-container">
+        <div class="single-img-container">
+            <a href="https://open.spotify.com/track/3s9U26KQ7ryswmToTPCC7f?si=8caf2c5f580f48e3" target="_blank" alt="Kanskje Du Og E Cover">
+                <img class="single-picture" src="images/DOPAMIN-cover.jpg">
+            </a>
         </div>
-
-        <div class="social-media-container">
-            <div></div>
-            <div>
-                <a href="https://www.instagram.com/gutbandet" target="_blank" alt="Instagram Logo">
-                    <img class="social-media-logos" src="images/Logos/instagram-circle-round-black.svg">
-                </a>
-            </div>
-            <div>
-                <a href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" alt="Spotify Logo">
-                    <img class="social-media-logos" src="images/Logos/spotify-logo-black.svg">
-                </a>
-            </div>
-            <div>
-                <a href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" alt="Apple Music Logo">
-                    <img class="social-media-logos" src="images/Logos/black-apple-music-round-circle.svg">
-                </a>
-            </div>
-            <div></div>
+        <div class="single-info">
+            <p class="single-header">NESTE</p>
+            <p class="single-header">SINGELSLIPP</p>
+            <p class="single-header">DOPAMIN</p>
+            <p class="single-header">4. april</p>
+            <!-- <p class="single-text"></p> -->
         </div>
     </div>
 
-    <div class="single-container">
-        <div></div>
+    <div class="social-media-container">
         <div>
-            <a href="https://open.spotify.com/track/3s9U26KQ7ryswmToTPCC7f?si=8caf2c5f580f48e3" target="_blank" alt="Kanskje Du Og E Cover">
-                <img class="single-picture" src="images/KANSKJE_DU_OG_E_COVER.jpg">
+            <a href="https://www.instagram.com/gutbandet" target="_blank" alt="Instagram Logo">
+                <img class="social-media-logos-bottom" src="images/Logos/white-insta.svg">
             </a>
         </div>
         <div>
-            <p class="single-header"><strong>SINGELSLIPP</strong></p>
-            <p class="single-text">Vi slipper første singel KANSKJE DU OG E 28 februar og gleder oss utrolig masse! Følg med og gi den en lytt når den kommer ut</p>
+            <a href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" alt="Spotify Logo">
+                <img class="social-media-logos-bottom" src="images/Logos/white-spotify.svg">
+            </a>
         </div>
-        <div></div>
+        <div>
+            <a href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" alt="Apple Music Logo">
+                <img class="social-media-logos-am-bottom" src="images/Logos/white-apple-music-filled.svg">
+            </a>
+        </div>
     </div>
 
-    <div class="biografi-container"> 
-        <div></div>
-        <div>
-            <p class="biografi-header"><strong>BIOGRAFI</strong></p>
-            <p class="biografi-text">Det Trondheimsbaserte bandet GUT bruker
-                fengande pop/rock-låter til å uttrykke fryden
-                og frustrasjonen ved å vere gut/ung i dag.
-                Musikken kombinerer frontfigur Hans Morten
-                si karakteristiske nerve og folldaldialekt med
-                funky gitarar og draumande retro-synther.
-                Det er kanskje ikkje heilt feil å trekkje ein
-                sjangarparallell til The 1975 eller Donkeyboy.
-                Bandet, som fann saman hausten 2024, har
-                brukt tida intensivt i studio. Debutsingelen
-                KANSKJE DU OG E kjem ut 28.02 og med ei
-                rekkje andre låtar i ryggen er GUT meir enn
-                klare til å setje sitt preg på den lokale
-                musikkarenaen.</p>
-        </div>
-        <div>
-            <img class="biografi-picture" src="images/Bandbilde1.jpg">
-        </div>
-        <div></div>
-    </div>
 </body>
 </html>
