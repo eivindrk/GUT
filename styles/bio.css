@@ -19,6 +19,8 @@
 
 .bio-text {
     line-height: 1.3em;
+    padding-bottom: 17px;
+    
 }
 
 .band-section {
@@ -64,10 +66,6 @@
 
     .bio-textbox, .band-presentation {
         width: 85vw;
-    }
-
-    .bio-text {
-        padding-bottom: 17px;
     }
 
     .band-section {
