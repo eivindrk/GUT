@@ -8,11 +8,11 @@
 
 .bio-textbox {
     width: 60vw;
-    min-width: 500px;
+    /* min-width: 500px; */
 }
 
 .bio-header {
-    font-family: "Bebas Neue", serif;
+    font-family: "Bebas Neue", Arial;
     font-size: 50px;
     margin-bottom: 20px
 }
@@ -39,12 +39,6 @@
     justify-content: center;
 }
 
-@media (min-width: 1000px) {  /* Adjust breakpoint as needed */
-    .band-presentation {
-        grid-template-columns: repeat(3, 1fr); /* Maximum 3 columns */
-    }
-}
-
 .member-pic {
     width: 100%;
     height: 100%;
@@ -52,12 +46,32 @@
 }
 
 .member-name {
-    font-family: "Bebas Neue", serif;
+    font-family: "Bebas Neue", Arial;
     color: white;
     margin-top: 10px;
 }
 
 .member-info {
-    font-family: "Bebas Neue", serif;
+    font-family: "Bebas Neue", Arial;
     color: white;
+}
+
+@media screen and (max-width: 700px) {  /* Adjust breakpoint as needed */
+    .bio-textbox, .band-presentation {
+        width: 85vw;
+    }
+
+    .bio-text {
+        padding: 7px;
+    }
+
+    .band-section {
+        border-radius: 30px 30px 0 0;
+    }
+
+    .band-presentation {
+        grid-template-columns: repeat(2, 1fr); /* Maximum 3 columns */
+    }
+
+    
 }
