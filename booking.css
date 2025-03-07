@@ -32,3 +32,13 @@
     object-fit: cover;
     object-position: center 40%;
 }
+
+@media screen and (max-width: 700px){
+    .booking-decoration {
+        margin-top: 25vw;
+    }
+
+    .booking {
+        margin-bottom: 0;
+    }
+}
