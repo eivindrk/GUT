@@ -5,13 +5,17 @@ $(document).ready(
             $(".dropdown-menu").slideToggle(300);
             $(".single-container").slideToggle(300);
             $(".social-media-container").slideToggle(300);
-
+            $(".band-bio").slideToggle(300);
+            $(".band-section").slideToggle(300);
+            
         });
 
         $(".close-button").on("click", function(){
             $(".dropdown-menu").slideToggle(300);
             $(".single-container").slideToggle(300);
             $(".social-media-container").slideToggle(300);
+            $(".band-bio").slideToggle(300);
+            $(".band-section").slideToggle(300);
         })
 
         
