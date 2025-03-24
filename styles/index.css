@@ -1,7 +1,7 @@
 .header-image {
     width: 100vw; /* Full width of the viewport */ 
     height: 100vh;
-    max-height: 80vw;
+    max-height: 70vw;
     position: relative;
     overflow: hidden; /* Ensures no overflow from the image */
 }
