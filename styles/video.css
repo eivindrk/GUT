@@ -52,17 +52,20 @@
 
 @media screen and (max-width: 700px) {
     .video-container{
-        top: 45vh;
+        top: 50vh;
         transform: translate(0, -50%);
     }
 
     .header-text {
-        top: 17vw;
+        top: 10vh;
         font-size: 30vw;
     }
 
     .utkast-tekst {
-        top: 30vw;
+        top: 20vh;
         font-size: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
     }
 }
