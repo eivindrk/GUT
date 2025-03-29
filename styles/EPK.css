@@ -54,12 +54,33 @@
 }
 
 .yt-section {
-    width: 100vw;
     background-image: url("https://gutbandet.com/images/GUT-LOGO-BACKGROUND.jpg");
     background-size: cover;
+}
+
+.yt-sec-title {
+    font-size: 6vw;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 0;
+}
+
+.yt-sec-subtitle {
+    font-size: 3vw;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 1vw;
+    padding-bottom: 0;
+}
+
+.video-container {
+    width: 100vw;
     display: flex;
     justify-content: center;
-    padding-top: 5vw;
+    padding-top: 3vw;
     padding-bottom: 5vw;
 }
 
