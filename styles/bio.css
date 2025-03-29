@@ -30,7 +30,7 @@ body {
 .band-section {
     display: flex;
     justify-content: center;
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(33, 33, 33);
     border-radius: 40px 40px 0 0;
     padding-top: 30px;
     padding-bottom: 200px;
@@ -46,11 +46,24 @@ body {
     justify-content: center;
 }
 
-.member-pic {
+.member-pic, .member-pic-hakon, .member-pic-johan {
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    aspect-ratio: 2/3;
 }
+
+.img-div-hakon, .img-div-johan {
+    overflow: hidden;
+}
+
+.member-pic-hakon {
+    transform: scale(1.75);
+}
+
+.member-pic-johan {
+    transform: scale(1.3);
+}
+
 
 .member-name {
     font-family: "Bebas Neue", Arial;
