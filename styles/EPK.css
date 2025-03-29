@@ -53,4 +53,19 @@
     padding-bottom: 1.5vw;
 }
 
+.yt-section {
+    width: 100vw;
+    background-image: url("https://gutbandet.com/images/GUT-LOGO-BACKGROUND.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.video {
+    width: 60vw;
+    height: 40vw;
+}
+
 
