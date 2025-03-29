@@ -1,4 +1,8 @@
 
+body {
+    background-image: url("https://gutbandet.com/images/GUT-LOGO-BACKGROUND.jpg");
+}
+
 .logo {
     width: 100vw;
     height: 100vh;
@@ -12,33 +16,26 @@
 }
 
 .header-text {
-    position:absolute;
-    top: 8vw;
-    left: 50%;
-    transform: translate(-50%, 0);
     font-family: "Bebas Neue", Arial;
     font-size: 15vw;
     color: rgb(226, 226, 226);
-    line-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
     margin: 0 0 0 0;
 }
 
 .utkast-tekst {
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     color: white;
-    position: absolute;
-    top: 13.5vw;
+    /* position: absolute; */
+    /* top: 13.5vw; */
     width: 100vw;
     font-size: 30px;
     text-align: center;
 }
 
 .video-container{
-    position: absolute;
+    /* position: absolute; */
     width: 100vw;
-    top: 12vw;
+    /* top: 12vw; */
     display: flex;
     justify-content: center;
 }
