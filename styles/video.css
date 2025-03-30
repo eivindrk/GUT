@@ -1,5 +1,6 @@
 body {
     background-image: url("https://gutbandet.com/images/GUT-LOGO-BACKGROUND.jpg");
+    background-size: cover;
 }
 
 .logo {
