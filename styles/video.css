@@ -1,4 +1,3 @@
-
 body {
     background-image: url("https://gutbandet.com/images/GUT-LOGO-BACKGROUND.jpg");
 }
@@ -17,52 +16,50 @@ body {
 
 .header-text {
     font-family: "Bebas Neue", Arial;
-    font-size: 15vw;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 250px;
+    line-height: 1em;
     color: rgb(226, 226, 226);
-    margin: 0 0 0 0;
 }
 
 .utkast-tekst {
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     color: white;
-    /* position: absolute; */
-    /* top: 13.5vw; */
-    width: 100vw;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
+    padding: 0 50px 0 50px;
 }
 
 .video-container{
-    /* position: absolute; */
     width: 100vw;
-    /* top: 12vw; */
     display: flex;
     justify-content: center;
+    padding-bottom: 10vw;
 }
 
 .video-element {
-    margin: auto;
     max-width: 90vw;
     max-height: 60vw;
 }
 
 
 @media screen and (max-width: 700px) {
-    .video-container{
+    /* .video-container{
         top: 50vh;
         transform: translate(0, -50%);
-    }
+    } */
 
     .header-text {
-        top: 10vh;
-        font-size: 30vw;
+        /* top: 10vh; */
+        font-size: 100px;
     }
 
     .utkast-tekst {
-        top: 20vh;
-        font-size: 24px;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: auto;
+        /* top: 20vh; */
+        font-size: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        /* width: auto; */
     }
 }
