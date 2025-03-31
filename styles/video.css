@@ -29,17 +29,17 @@ body {
     color: white;
     font-size: 50px;
     text-align: center;
-    padding: 0 50px 0 50px;
+    padding: 0 50px 50px 50px;
 }
 
 .video-container{
     width: 100vw;
     display: flex;
     justify-content: center;
-    padding-bottom: 10vw;
+    padding: 0 50px 30px 50px;
 }
 
-.video-element {
+.video {
     max-width: 90vw;
     max-height: 60vw;
 }
@@ -47,9 +47,12 @@ body {
 
 @media screen and (max-width: 700px) {
     /* .video-container{
-        top: 50vh;
-        transform: translate(0, -50%);
+        max-height
     } */
+    .video {
+        max-width: 90vw;
+        max-height: 60vw;
+    }
 
     .header-text {
         /* top: 10vh; */

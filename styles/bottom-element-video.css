@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 700px) {
     .social-media-container {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 100vw;
         height: 10vh; 
