@@ -143,10 +143,10 @@
 
 
 @media screen and (max-aspect-ratio: 16/9) {
-    /* .back-video {
+    .back-video {
         object-fit: cover;
         width: 100vw;
         height: 100%;
 
-    } */
+    }
 }
