@@ -31,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .back-video {
@@ -141,9 +142,11 @@
 }
 
 
-@media (max-aspect-ratio: 16/9) {
-    .back-video {
-        width: auto;
+@media screen and (max-aspect-ratio: 16/9) {
+    /* .back-video {
+        object-fit: cover;
+        width: 100vw;
         height: 100%;
-    }
+
+    } */
 }
