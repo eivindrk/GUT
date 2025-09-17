@@ -46,11 +46,20 @@
     padding-bottom: 1.5vw;
 }
 
-.text-paragraph {
+.text-paragraph, .text-paragraph-sitat, .text-paragraph-align-right {
     font-size: 1.8vw;
     text-align: justify;
     line-height: 1.2em;
     padding-bottom: 1.5vw;
+}
+
+.text-paragraph-sitat {
+    margin-left: 80px;
+    line-height: 1em;
+}
+
+.text-paragraph-align-right {
+    text-align: right;
 }
 
 .yt-section {
@@ -86,7 +95,7 @@
 
 .video {
     width: 60vw;
-    height: 40vw;
+    aspect-ratio: 16 / 9;
 }
 
 
