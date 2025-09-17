@@ -59,13 +59,13 @@
 }
 
 .text-paragraph-sitat {
-    margin-top: 20px;
-    margin-left: 80px;
+    margin-top: 1vw;
+    margin-left: 3vw;
     line-height: 1em;
 }
 
 .text-paragraph-align-right {
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     text-align: right;
 }
 
