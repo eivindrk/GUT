@@ -31,7 +31,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     line-height: 1em;
-    font-style: italic;
+    transform: skewX(-10deg);
 }
 
 .bio-text-nina {
