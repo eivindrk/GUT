@@ -21,10 +21,22 @@ body {
     margin-bottom: 20px
 }
 
-.bio-text {
+.bio-text, .bio-text-quote, .bio-text-nina {
     line-height: 1.3em;
     padding-bottom: 17px;
     text-align: justify;
+}
+
+.bio-text-quote {
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1em;
+    font-style: italic;
+}
+
+.bio-text-nina {
+    text-align: right;
+    padding-right: 40px;
 }
 
 .band-section {
