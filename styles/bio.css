@@ -30,6 +30,7 @@ body {
 .bio-text-quote {
     padding-left: 40px;
     padding-right: 40px;
+    text-align: left;
     line-height: 1em;
     transform: skewX(-10deg);
 }
