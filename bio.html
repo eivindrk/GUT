@@ -76,83 +76,16 @@
 
         <div class="band-bio">
             <div class="bio-textbox">
-                <p class="bio-header">BIOGRAFI</p>
-                <p class="bio-text">
-                    GUT er eit Trondheimsbasert band som bruker fengande pop/rock-låtar 
-                    til å uttrykkja fryden og frustrasjonen ved å vere gut/ung i dag. 
-                    Musikken kombinerer frontfigur Hans Morten si karakteristiske nerve 
-                    og folldaldialekt med funky gitarar og draumande retro-synther. Det 
-                    er kanskje ikkje heilt feil å trekkja ein sjangarparallell til The 1975, Regnvær eller Donkeyboy.
-
-                </p>
-                <p class="bio-text-quote">
-                    Det er lett, men følsomt! Soundet får det til å bruse i blodet og du får skrudd på følelsene.
-                </p>
-                <p class="bio-text-nina">
-                    Nina Gjertsen // P3 Urørt
-                </p>
-                <p class="bio-text">
-                    Dei fem fann saman hausten 2024 og har brukt tida intensivt i studio. 
-                    Debutsingelen KANSKJE DU OG E kom ut 28.02 og havnet på C-lista til P3 Urørt. 
-                    Seinere samme vår ga dei ut ytterlege to låter og blei på nytt anbefalt av P3 Urørt 
-                    med VIL DU BLI MI. Med ytterlegare 5 låtar i ryggen er dei meir enn klare til å setja sitt preg på musikkarenaen.
-
-                </p>
-                <p class="bio-text">
-                    GUT har eit ønskje om at musikken og tekstane skal spegla livet slik det faktisk er. Nokre dagar står ein midt i store tap og må bli kjent med sitt djupaste indre, medan andre dagar er bekymringslause, og alt ein vil er å dansa. Med dette som utgangspunkt håpar dei at prosjektet kan vekkja noko hos lyttarane.
-                    I løpet av 2025 vil gjengen jobba målretta for å nå ut med musikken vår og skaffa seg scener der dei kan visa fram sitt energiske live-show og det prosjektet dei trur på og brenn for.
-
-                </p>
+                <p id="bio-header" class="bio-header"></p>
+                <div id="bio-text-container"></div>
+                <p id="bio-quote-text" class="bio-text-quote"></p>
+                <p id="bio-quote-author" class="bio-text-nina"></p>
             </div>
         </div>
 
         <div class="band-section">
             <div class="band-presentation">
-                <div class="band-member">
-                    <div class="img-div-johan">
-                        <img class="member-pic-johan" src="images/band-members/Johan-bio.jpeg" alt="">
-                    </div>
-                    <div>
-                        <p class="member-name">Johan Nes //</p>
-                        <p class="member-info">Trommer og miksing</p>
-                    </div>
-                </div>
-                <div class="band-member">
-                    <div>
-                        <img class="member-pic" src="images/band-members/Hans-bio.jpeg" alt="">
-                    </div>
-                    <div>
-                        <p class="member-name">Hans Morten Ståland //</p>
-                        <p class="member-info">Vokal</p>
-                    </div>
-                </div>
-                <div class="band-member">
-                    <div>
-                        <img class="member-pic" src="images/band-members/Simon-bio.jpeg" alt="">
-                    </div>
-                    <div>
-                        <p class="member-name">Simon Garcés //</p>
-                        <p class="member-info">Gitar</p>
-                    </div>
-                </div>
-                <div class="band-member">
-                    <div class="img-div-hakon">
-                        <img class="member-pic-hakon" src="images/band-members/Hakon-bio.jpeg" alt="">
-                    </div>
-                    <div>
-                        <p class="member-name">Håkon Bjåstad //</p>
-                        <p class="member-info">Keys</p>
-                    </div>
-                </div>
-                <div class="band-member">
-                    <div>
-                        <img class="member-pic" src="images/band-members/Eivind-bio.jpeg" alt="">
-                    </div>
-                    <div>
-                        <p class="member-name">Bror Eivind Reppen Karlsen //</p>
-                        <p class="member-info">Gitar</p>
-                    </div>
-                </div>
+                <!-- Band members will be loaded here by JavaScript -->
             </div>
         </div>
 
@@ -180,6 +113,6 @@
         </div>
     </body>
 
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="someJava.js"></script> 
+    <script src="bio-loader.js"></script> 
 </html>
