@@ -1,0 +1,14 @@
+{
+  "name": "chrome-devtool-mcp-server",
+  "version": "0.1.0",
+  "description": "Minimal MCP server (stdio) for chrome-devtool integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.34.0"
+  }
+}

@@ -48,11 +48,15 @@
     margin-right: 40px;
 }
 
+.social-media-link {
+    margin-left: 1.5vw;
+}
+
 .social-media-logos {
     width: 35px;
     opacity: 100%;
     transition-duration: 50ms;
-    margin-left: 1.5vw;
+    display: block;
 }
 
 .social-media-logos:hover {
