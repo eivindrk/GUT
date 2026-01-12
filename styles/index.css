@@ -34,6 +34,11 @@
     overflow: hidden;
 }
 
+/* make the container the positioning context for absolute buttons */
+.dopamin-container {
+    position: relative;
+}
+
 .back-video {
     position: absolute;
     z-index: -1;
@@ -52,20 +57,52 @@
     color: white;
 }
 
+.dopamin-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.dopamin-header {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    font-size: 160px;
+    color: white;
+    text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
 .dopamin-button {
     font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     font-size: 40px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    border: 2px solid white;
-    padding: 5px 10px 5px 10px;
-    transition-duration: 200ms;
+    background: rgba(255,69,0,0.95);
+    border: none;
+    padding: 12px 26px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, opacity 160ms ease;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: visible;
+    margin-left: -10%;
+    margin-top: 380%;
 }
 
 .dopamin-button:hover {
-    background-color: white;
-    opacity: 70%;
-    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 34px rgba(0,0,0,0.5);
+    background: #ff6b3a;
+    opacity: 1;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 700px) {
+    /* On small screens keep the main button centered for accessibility */
+    .dopamin-button.pos-main {
+        position: static;
+        display: inline-block;
+        margin-top: 8px;
+    }
 }
 
 /* .single-container {
