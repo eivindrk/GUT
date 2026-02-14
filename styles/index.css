@@ -76,33 +76,62 @@ body.page-index .site-header.scrolled {
     line-height: 1;
 }
 
-/* ---------- VIDEO SECTION ---------- */
-.video-hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    min-height: 500px;
-    overflow: hidden;
+/* ---------- LATEST RELEASE SECTION ---------- */
+.release-section {
+    background-color: var(--color-dark);
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.release-inner {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: var(--space-2xl);
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
-.video-hero .back-video {
-    position: absolute;
-    inset: 0;
+.release-cover {
+    flex-shrink: 0;
+    width: 380px;
+    height: 380px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.release-cover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 56px rgba(0, 0, 0, 0.6);
+}
+
+.release-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
 }
 
-.video-hero .hero-overlay {
-    z-index: 1;
+.release-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
 }
 
-.video-hero .hero-content {
-    z-index: 2;
+.release-label {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    letter-spacing: 0.15em;
+}
+
+.release-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--color-white);
+    line-height: 1;
+    letter-spacing: 0.03em;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -120,5 +149,31 @@ body.page-index .site-header.scrolled {
 
     .hero-logo {
         font-size: clamp(5rem, 20vw, 8rem);
+    }
+
+    .release-section {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .release-inner {
+        flex-direction: column;
+        gap: var(--space-xl);
+        text-align: center;
+    }
+
+    .release-cover {
+        width: 280px;
+        height: 280px;
+    }
+
+    .release-info {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .release-cover {
+        width: 240px;
+        height: 240px;
     }
 }
