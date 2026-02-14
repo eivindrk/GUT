@@ -2,6 +2,11 @@
    GUT — EPK Page Styles
    =========================== */
 
+body.page-epk {
+    padding-top: 0;
+    background-color: var(--color-white);
+}
+
 /* ---------- EPK HERO ---------- */
 .epk-hero {
     position: relative;
@@ -36,21 +41,9 @@
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.epk-label {
-    display: block;
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: var(--color-text-light);
-    letter-spacing: 0.15em;
-    margin-top: 1rem;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
 /* ---------- EPK CONTENT ---------- */
 .epk-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-lg) var(--space-lg) 0;
 }
 
 .epk-back-link {
@@ -59,7 +52,7 @@
     font-size: 1.2rem;
     color: var(--color-accent);
     letter-spacing: 0.05em;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
     transition: opacity var(--transition-fast);
 }
 
@@ -67,13 +60,12 @@
     opacity: 0.7;
 }
 
-/* ---------- EPK ROWS ---------- */
+/* ---------- EPK ROWS (tight, full-width images) ---------- */
 .epk-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-    margin-bottom: var(--space-xxl);
-    align-items: center;
+    gap: 0;
+    align-items: stretch;
 }
 
 .epk-row.reverse {
@@ -86,9 +78,8 @@
 
 .epk-img {
     width: 100%;
-    height: auto;
     overflow: hidden;
-    border-radius: var(--border-radius);
+    min-height: 45vw;
 }
 
 .epk-img img {
@@ -98,40 +89,52 @@
     display: block;
 }
 
+.epk-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vw 4vw;
+}
+
 .epk-text h2 {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: 7vw;
     font-weight: 900;
-    margin-bottom: var(--space-lg);
+    margin-bottom: 1.5vw;
     letter-spacing: 0.03em;
+    color: var(--color-text-dark);
 }
 
 .epk-text p {
-    font-size: clamp(1rem, 1.55vw, 1.2rem);
-    line-height: 1.6;
+    font-family: var(--font-body);
+    font-size: 1.55vw;
+    line-height: 1.2em;
     text-align: justify;
-    margin-bottom: var(--space-lg);
+    padding-bottom: 1.5vw;
     color: var(--color-text-dark);
 }
 
 /* ---------- EPK QUOTE ---------- */
 .epk-quote {
-    margin: var(--space-xl) 0;
+    margin: 1vw 0;
+    margin-left: 3vw;
     padding-left: var(--space-lg);
     border-left: 3px solid var(--color-accent);
 }
 
 .epk-quote p {
     font-style: italic;
-    line-height: 1.4;
-    margin-bottom: var(--space-sm);
+    line-height: 1em;
+    padding-bottom: 1vw;
 }
 
 .epk-quote .quote-author {
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 1.55vw;
+    color: var(--color-text-dark);
     text-align: right;
     font-style: normal;
+    padding-bottom: 1vw;
 }
 
 /* ---------- VIDEO SECTION ---------- */
@@ -139,7 +142,7 @@
     background-image: url("../images/GUT-LOGO-BACKGROUND.jpg");
     background-size: cover;
     background-position: center;
-    padding: var(--space-xxl) var(--space-lg);
+    padding: 4vw var(--space-lg);
     text-align: center;
     position: relative;
 }
@@ -147,10 +150,7 @@
 .epk-video-section::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
@@ -190,19 +190,32 @@
 
     .epk-row {
         grid-template-columns: 1fr;
-        gap: var(--space-lg);
     }
 
     .epk-row.reverse {
         direction: ltr;
     }
 
+    .epk-img {
+        min-height: 60vw;
+    }
+
+    .epk-text {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    .epk-text h2 {
+        font-size: 10vw;
+    }
+
     .epk-text p {
+        font-size: 16px;
+        line-height: 1.4em;
         text-align: left;
     }
 
-    .epk-quote {
-        padding-left: var(--space-md);
+    .epk-quote .quote-author {
+        font-size: 14px;
     }
 
     .epk-video-section {
