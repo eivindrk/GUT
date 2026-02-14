@@ -1,112 +1,211 @@
+/* ===========================
+   GUT — EPK Page Styles
+   =========================== */
 
-.logo {
-    width: 100vw;
+/* ---------- EPK HERO ---------- */
+.epk-hero {
+    position: relative;
+    width: 100%;
     height: 36vw;
+    min-height: 400px;
+    overflow: hidden;
 }
 
-.logo-image, .band-pic-image, .band-pic-image-old {
+.epk-hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.header-text {
+.epk-hero-overlay {
     position: absolute;
-    top: 18vw;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
-    font-family: "Bebas Neue", Arial;
-    font-size: 30vw;
-    color: rgb(226, 226, 226);
-    line-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0 0 0 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 
-.row1, .row2 {
+.epk-logo {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(8rem, 30vw, 20rem);
+    color: var(--color-white);
+    line-height: 0.9;
+    letter-spacing: 0.05em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.epk-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--color-text-light);
+    letter-spacing: 0.15em;
+    margin-top: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- EPK CONTENT ---------- */
+.epk-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+.epk-back-link {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-xl);
+    transition: opacity var(--transition-fast);
+}
+
+.epk-back-link:hover {
+    opacity: 0.7;
+}
+
+/* ---------- EPK ROWS ---------- */
+.epk-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin:  auto;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xxl);
+    align-items: center;
 }
 
-.band-pic-left, .band-pic-right {
+.epk-row.reverse {
+    direction: rtl;
+}
+
+.epk-row.reverse > * {
+    direction: ltr;
+}
+
+.epk-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.epk-img img {
+    width: 100%;
     height: 100%;
-    height: 50vw;
+    object-fit: cover;
+    display: block;
 }
 
-.band-pic-right {
-    height: 45vw
-}
-
-.text-right {
-    padding: 3vw 5vw 0 3vw;
-}
-
-.header-bio, .header-ambisjoner {
-    font-family: "Bebas Neue", Arial;
-    font-size: 7vw;
+.epk-text h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 7vw, 4rem);
     font-weight: 900;
-    padding-bottom: 1.5vw;
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.03em;
 }
 
-.text-paragraph, .text-paragraph-sitat, .text-paragraph-align-right, 
-.text-paragraph-top-left {
-    font-size: 1.55vw;
+.epk-text p {
+    font-size: clamp(1rem, 1.55vw, 1.2rem);
+    line-height: 1.6;
     text-align: justify;
-    line-height: 1.2em;
-    padding-bottom: 1.5vw;
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-dark);
 }
 
-.text-paragraph-sitat {
-    margin-top: 1vw;
-    margin-left: 3vw;
-    line-height: 1em;
+/* ---------- EPK QUOTE ---------- */
+.epk-quote {
+    margin: var(--space-xl) 0;
+    padding-left: var(--space-lg);
+    border-left: 3px solid var(--color-accent);
 }
 
-.text-paragraph-align-right {
-    margin-bottom: 1vw;
+.epk-quote p {
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: var(--space-sm);
+}
+
+.epk-quote .quote-author {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
     text-align: right;
+    font-style: normal;
 }
 
-.text-paragraph-top-left {
-    margin-top: 5vw;
-}
-
-.yt-section {
-    background-image: url("https://gutbandet.com/images/GUT-LOGO-BACKGROUND.jpg");
+/* ---------- VIDEO SECTION ---------- */
+.epk-video-section {
+    background-image: url("../images/GUT-LOGO-BACKGROUND.jpg");
     background-size: cover;
-}
-
-.yt-sec-title {
-    font-size: 6vw;
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    color: white;
+    background-position: center;
+    padding: var(--space-xxl) var(--space-lg);
     text-align: center;
-    padding-top: 2vw;
-    padding-bottom: 0;
+    position: relative;
 }
 
-.yt-sec-subtitle {
-    font-size: 3vw;
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    color: white;
-    text-align: center;
-    padding-top: 1vw;
-    padding-bottom: 0;
+.epk-video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
-.video-container {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    padding-top: 3vw;
-    padding-bottom: 5vw;
+.epk-video-section > * {
+    position: relative;
+    z-index: 1;
 }
 
-.video {
-    width: 60vw;
-    aspect-ratio: 16 / 9;
+.epk-video-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--color-white);
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0.05em;
 }
 
+.epk-video-section .subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
+    letter-spacing: 0.08em;
+}
 
+.epk-video-section .video-embed {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 768px) {
+    .epk-hero {
+        height: 50vw;
+        min-height: 300px;
+    }
+
+    .epk-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .epk-row.reverse {
+        direction: ltr;
+    }
+
+    .epk-text p {
+        text-align: left;
+    }
+
+    .epk-quote {
+        padding-left: var(--space-md);
+    }
+
+    .epk-video-section {
+        padding: var(--space-xl) var(--space-md);
+    }
+}

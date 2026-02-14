@@ -1,187 +1,124 @@
-.header-image {
-    width: 100vw; /* Full width of the viewport */ 
-    height: 100vh;
-    max-height: 70vw;
-    position: relative;
-    overflow: hidden; /* Ensures no overflow from the image */
+/* ===========================
+   GUT — Home Page
+   =========================== */
+
+/* Override: no body padding on index, hero is full-bleed */
+body.page-index {
+    padding-top: 0;
 }
 
-.hovedbilde {
+/* Make header transparent on top of hero */
+body.page-index .site-header {
+    background-color: transparent;
+}
+
+body.page-index .site-header.scrolled {
+    background-color: var(--color-dark);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
     width: 100%;
-    height: 100%;
-    position: center 10%;
-    object-fit: cover;
-}
-
-.header-image2 {
-    width: 100vw; /* Full width of the viewport */ 
-    height: 120vh;
-    max-height: 80vw;
-    position: relative;
-    overflow: hidden; /* Ensures no overflow from the image */
-}
-
-.hovedbilde2 {
-    display: none
-}
-
-.dopamin-container {
-    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 500px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* make the container the positioning context for absolute buttons */
-.dopamin-container {
-    position: relative;
-}
-
-.back-video {
+.hero-image {
     position: absolute;
-    z-index: -1;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.dopamin-content {
-    text-align: center;
+/* Desktop image by default, mobile hidden */
+.hero-image .hero-img-mobile {
+    display: none;
 }
 
-.dopamin-header {
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    font-size: 160px;
-    color: white;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 40%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
 }
 
-.dopamin-content {
-    text-align: center;
+.hero-content {
     position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.hero-logo {
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 15vw, 12rem);
+    color: var(--color-white);
+    letter-spacing: 0.08em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    line-height: 1;
+}
+
+/* ---------- VIDEO SECTION ---------- */
+.video-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-hero .back-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-hero .hero-overlay {
+    z-index: 1;
+}
+
+.video-hero .hero-content {
     z-index: 2;
 }
 
-.dopamin-header {
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    font-size: 160px;
-    color: white;
-    text-shadow: 0 6px 20px rgba(0,0,0,0.6);
-}
-
-.dopamin-button {
-    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    color: #ffffff;
-    text-decoration: none;
-    background: rgba(255,69,0,0.95);
-    border: none;
-    padding: 12px 26px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, opacity 160ms ease;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: visible;
-    margin-left: -10%;
-    margin-top: 380%;
-}
-
-.dopamin-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 34px rgba(0,0,0,0.5);
-    background: #ff6b3a;
-    opacity: 1;
-    color: #ffffff;
-}
-
-@media screen and (max-width: 700px) {
-    /* On small screens keep the main button centered for accessibility */
-    .dopamin-button.pos-main {
-        position: static;
-        display: inline-block;
-    }
-}
-
-/* .single-container {
-    display: flex;
-    flex-direction: row;
-    background-image: linear-gradient(180deg, white , gray); 
-    background-color: white;
-    column-gap: 2vw;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    justify-content: center;
-} */
-
-/* .single-img-container {
-    overflow: hidden;
-    width: 30vw;
-    height: 30vw;
-    min-width: 220px;
-    min-height: 220px;
-}
-.single-picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition-duration: 200ms;
-}
-
-.single-picture:hover {
-    opacity: 0.8;
-    transform: scale(1.02);
-    box-shadow: 0px 0px 10px 5px #3433334c; 
-}
-
-.single-header, .biografi-header {
-    font-size: 60px;
-    font-size: calc(15px + 3vw);
-    font-family: "Bebas Neue", Arial;
-    color: black;
-}
-
-.single-info {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
-
-@media screen and (max-width: 700px) {
-    .header-image {
-        height: 100vh;
-        max-height: 100vh;
-    }
-
-    .hovedbilde2 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform:scale(1.2);
-        object-position: 49%;
-        display:inline-block;
-    }
-
-    .hovedbilde {
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 768px) {
+    .hero-image .hero-img-desktop {
         display: none;
     }
 
-    .dopamin-header{
-        font-size: 90px;
+    .hero-image .hero-img-mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .dopamin-button{
-        font-size: 30px;
+    .hero-logo {
+        font-size: clamp(5rem, 20vw, 8rem);
     }
 }
-
-
-/* @media screen and (max-aspect-ratio: 16/9) {
-    .back-video {
-        object-fit: cover;
-        width: 100vw;
-        height: 100%;
-    }
-} */

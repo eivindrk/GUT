@@ -1,47 +1,58 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('bio-content.json')
-        .then(response => response.json())
-        .then(data => {
-            // Populate biography section
-            document.getElementById('bio-header').textContent = data.biography.header;
-            
-            const bioTextContainer = document.getElementById('bio-text-container');
+/* ===========================
+   GUT — Bio Content Loader
+   =========================== */
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('bio-content.json');
+        const data = await response.json();
+
+        // Populate biography section
+        const bioHeader = document.getElementById('bio-header');
+        const bioTextContainer = document.getElementById('bio-text-container');
+        const quoteText = document.getElementById('bio-quote-text');
+        const quoteAuthor = document.getElementById('bio-quote-author');
+
+        if (bioHeader) {
+            bioHeader.textContent = data.biography.header;
+        }
+
+        if (bioTextContainer) {
             data.biography.paragraphs.forEach(para => {
                 const p = document.createElement('p');
                 p.className = 'bio-text';
                 p.textContent = para;
                 bioTextContainer.appendChild(p);
             });
+        }
 
-            document.getElementById('bio-quote-text').textContent = data.biography.quote.text;
-            document.getElementById('bio-quote-author').textContent = data.biography.quote.author;
+        if (quoteText) {
+            quoteText.textContent = `"${data.biography.quote.text}"`;
+        }
 
-            // Populate band members section
-            const bandPresentation = document.querySelector('.band-presentation');
-            bandPresentation.innerHTML = ''; // Clear existing content
+        if (quoteAuthor) {
+            quoteAuthor.textContent = data.biography.quote.author;
+        }
 
+        // Populate band members
+        const membersGrid = document.getElementById('members-grid');
+        if (membersGrid) {
             data.bandMembers.forEach(member => {
-                const memberDiv = document.createElement('div');
-                memberDiv.className = 'band-member';
+                const card = document.createElement('div');
+                card.className = 'member-card';
 
-                let imgClass = 'member-pic';
-                if (member.name === 'Johan Nes') {
-                    imgClass = 'member-pic-johan';
-                } else if (member.name === 'Håkon Bjåstad') {
-                    imgClass = 'member-pic-hakon';
-                }
-
-                memberDiv.innerHTML = `
-                    <div class="img-div-${member.name.split(' ')[0].toLowerCase()}">
-                        <img class="${imgClass}" src="${member.image}" alt="">
+                card.innerHTML = `
+                    <div class="member-img-wrapper">
+                        <img src="${member.image}" alt="${member.name}">
                     </div>
-                    <div>
-                        <p class="member-name">${member.name} //</p>
-                        <p class="member-info">${member.role}</p>
-                    </div>
+                    <p class="member-name">${member.name}</p>
+                    <p class="member-role">${member.role}</p>
                 `;
-                bandPresentation.appendChild(memberDiv);
+
+                membersGrid.appendChild(card);
             });
-        })
-        .catch(error => console.error('Error loading bio content:', error));
+        }
+    } catch (error) {
+        console.error('Error loading bio content:', error);
+    }
 });

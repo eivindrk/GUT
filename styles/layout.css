@@ -1,0 +1,239 @@
+/* ===========================
+   GUT — Layout (Header, Nav, Footer)
+   =========================== */
+
+/* ---------- HEADER ---------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-dark);
+    transition: background-color var(--transition-base);
+}
+
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    padding: 0 var(--space-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.site-logo {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    transition: opacity var(--transition-fast);
+}
+
+.site-logo:hover {
+    opacity: 0.8;
+}
+
+/* Desktop Navigation */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.nav-link {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    letter-spacing: 0.05em;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width var(--transition-base);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: var(--color-white);
+}
+
+/* Social icons in header */
+.header-socials {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ---------- HAMBURGER (mobile) ---------- */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+    z-index: 1100;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-white);
+    margin: 6px 0;
+    transition: transform var(--transition-base), opacity var(--transition-fast);
+    border-radius: 2px;
+}
+
+/* Hamburger open state */
+.hamburger-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ---------- MOBILE NAV OVERLAY ---------- */
+.nav-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--color-dark);
+    z-index: 1050;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.nav-mobile.open {
+    display: flex;
+    opacity: 1;
+}
+
+.nav-mobile .nav-link {
+    font-size: 3rem;
+    color: var(--color-white);
+}
+
+.nav-mobile .mobile-socials {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.nav-mobile .social-icon {
+    width: 36px;
+    height: 36px;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+    background-color: var(--color-dark);
+    padding: var(--space-xl) 0;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.footer-socials .social-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-socials .social-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.footer-text {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+}
+
+/* ---------- BODY OFFSET for fixed header ---------- */
+body {
+    padding-top: var(--header-height);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height: 64px;
+    }
+
+    .nav-desktop,
+    .header-socials {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .site-header .header-inner {
+        padding: 0 var(--space-md);
+    }
+
+    .site-logo {
+        font-size: 2.4rem;
+    }
+}

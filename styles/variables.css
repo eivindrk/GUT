@@ -1,0 +1,41 @@
+/* ===========================
+   GUT — Design Tokens
+   =========================== */
+
+:root {
+    /* Colors */
+    --color-dark:        #111111;
+    --color-dark-soft:   #1a1a1a;
+    --color-dark-card:   #222222;
+    --color-light:       #f5f2ee;
+    --color-light-alt:   #ebe7e1;
+    --color-white:       #ffffff;
+    --color-text-dark:   #1a1a1a;
+    --color-text-light:  #f0f0f0;
+    --color-text-muted:  #888888;
+    --color-accent:      #ff5a1f;
+    --color-accent-hover:#ff7a4a;
+
+    /* Typography */
+    --font-display: "Bebas Neue", Arial, Helvetica, sans-serif;
+    --font-body:    "League Spartan", "Roboto", Arial, sans-serif;
+
+    /* Spacing */
+    --space-xs:  0.25rem;
+    --space-sm:  0.5rem;
+    --space-md:  1rem;
+    --space-lg:  2rem;
+    --space-xl:  3rem;
+    --space-xxl: 4rem;
+    --space-2xl: 5rem;
+
+    /* Layout */
+    --max-width:    1200px;
+    --header-height: 80px;
+    --border-radius: 8px;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 400ms ease;
+}

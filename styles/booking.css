@@ -1,44 +1,86 @@
-.booking-body {
-    background-color: white;
+/* ===========================
+   GUT — Booking Page
+   =========================== */
+
+/* ---------- BOOKING HERO ---------- */
+.booking-hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 280px;
+    overflow: hidden;
 }
 
-.booking {
-    margin: 5vw;
-    justify-content: center;
-    text-align: center;
-}
-
-.booking-title {
-    font-family: "Bebas Neue", serif;
-    font-size: 60px;
-    font-weight: 900;
-    margin-bottom: 20px
-}
-
-.booking-text {
-    font-size: 30px;
-}
-
-.booking-decoration {
-    height: 20vw;
-    min-height: 150px;
-    margin-bottom: 200px;
-    margin-top: 200px;
-}
-
-.booking-img {
+.booking-hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 40%;
 }
 
-@media screen and (max-width: 700px){
-    .booking-decoration {
-        margin-top: 25vw;
+.booking-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-hero-overlay h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+}
+
+/* ---------- BOOKING CONTENT ---------- */
+.booking-content {
+    padding: var(--space-2xl) var(--space-lg);
+    text-align: center;
+    background-color: var(--color-light);
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.booking-label {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.booking-email {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--color-text-dark);
+    letter-spacing: 0.02em;
+    transition: color var(--transition-fast);
+}
+
+.booking-email:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width: 768px) {
+    .booking-hero {
+        height: 30vh;
+        min-height: 220px;
     }
 
-    .booking {
-        margin-bottom: 0;
+    .booking-content {
+        padding: var(--space-xl) var(--space-md);
+        min-height: 50vh;
     }
 }

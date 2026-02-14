@@ -3,105 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUT-EPK</title>
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/EPK.css">
-    <link rel="stylesheet" href="styles/bottom-element-EPK.css">
+    <title>GUT – EPK</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/epk.css">
 </head>
 
-<body>
-    <div class="logo">
-        <img class="logo-image" src="images/GUT-LOGO-BACKGROUND.jpg" alt="Logo">
-        <a href="index.html">
-            <div class="header-text">GUT</div>
-        </a>
-    </div>
+<body class="page-epk">
 
-    <div class="row1">
-        <div class="band-pic-left">
-            <img class="band-pic-image-old" src="images/index-pic.jpg" alt="logo">
+    <!-- EPK HERO -->
+    <section class="epk-hero">
+        <img src="images/GUT-LOGO-BACKGROUND.jpg" alt="GUT">
+        <div class="epk-hero-overlay">
+            <span class="epk-logo">GUT</span>
+            <span class="epk-label">ELECTRONIC PRESS KIT</span>
         </div>
-        <div class="text-right">
-            <p class="header-bio">BIOGRAFI</p>
-            <p class="text-paragraph">GUT er eit Trondheimsbasert band som bruker fengande 
-                pop/rock-låtar til å uttrykkja fryden og frustrasjonen ved å vere gut/ung i dag. 
-                Musikken kombinerer frontfigur Hans Morten si karakteristiske nerve og 
-                folldaldialekt med funky gitarar og draumande retro-synther. Det er kanskje 
-                ikkje heilt feil å trekkja ein sjangarparallell til The 1975, Regnvær eller Donkeyboy. 
-                Dei fem fann saman hausten 2024 og har brukt tida intensivt i studio. 
-                Debutsingelen KANSKJE DU OG E kom ut 28.02 og havna på C-lista til P3 Urørt. 
-            </p>
-            <p class="text-paragraph-sitat">
-                “Det er lett, men følsomt! Soundet får det til å bruse i blodet og du får skrudd på følelsene.”
-            </p>
-            <p class="text-paragraph-align-right">
-                Nina Gjertsen // P3 Urørt
-            </p>
-            <p class="text-paragraph">
-                Seinere samme vår ga dei ut to nye låtar og blei på nytt anbefalt av P3 Urørt 
-                med VIL DU BLI MI. Med ei rekkje låtar på lager er dei meir enn klare til å setja 
-                sitt preg på musikkarenaen.
-            </p>
-        </div>
-    </div>
-    
-    <div class="row2">
-        <div class="text-right">
-            <p class="header-ambisjoner">AMBISJONER</p>
-            <p class="text-paragraph-top-left">GUT har eit ønskje om at musikken og tekstane skal spegla 
-                livet slik det faktisk er. Nokre dagar står ein midt i store tap og må bli kjent 
-                med sitt djupaste indre, medan andre dagar er bekymringslause, og alt ein vil er 
-                å dansa. Med dette som utgangspunkt håpar dei at prosjektet kan vekkja noko hos 
-                lyttarane.</p>
-            <p class="text-paragraph">Videre vil gjengen fortset å jobba målretta for å nå ut med 
-                musikken sin og skaffa seg scener der dei kan visa fram sitt energiske live-show 
-                og det prosjektet dei trur på og brenn for.</p>
-        </div>
-        <div class="band-pic-right">
-            <img class="band-pic-image" src="images/GUTUNGEN.jpg" alt="logo">
-        </div>
-    </div>
+    </section>
 
-    <div class="yt-section">
-        <p class="yt-sec-title">
-            KANSKJE DU OG E
-        </p>
-        <p class="yt-sec-subtitle">
-            LIVE PÅ LOFTET
-        </p>
-        <div class="video-container">
-            <iframe class="video" src="https://www.youtube.com/embed/Gytv51Ak4Is?si=mrj3kLUoI3aKixf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>    
-            </iframe>
+    <!-- EPK CONTENT -->
+    <div class="epk-content">
+        <a href="index.html" class="epk-back-link">&larr; TILBAKE TIL GUTBANDET.COM</a>
+
+        <!-- ROW 1: Image left, text right -->
+        <div class="epk-row fade-in">
+            <div class="epk-img">
+                <img src="images/index-pic.jpg" alt="GUT band">
+            </div>
+            <div class="epk-text">
+                <h2>BIOGRAFI</h2>
+                <p>GUT er eit Trondheimsbasert band som bruker fengande 
+                    pop/rock-låtar til å uttrykkja fryden og frustrasjonen ved å vere gut/ung i dag. 
+                    Musikken kombinerer frontfigur Hans Morten si karakteristiske nerve og 
+                    folldaldialekt med funky gitarar og draumande retro-synther. Det er kanskje 
+                    ikkje heilt feil å trekkja ein sjangarparallell til The 1975, Regnvær eller Donkeyboy.</p>
+                <p>Dei fem fann saman hausten 2024 og har brukt tida intensivt i studio. 
+                    Debutsingelen KANSKJE DU OG E kom ut 28.02 og havna på C-lista til P3 Urørt.</p>
+                <div class="epk-quote">
+                    <p>"Det er lett, men følsomt! Soundet får det til å bruse i blodet og du får skrudd på følelsene."</p>
+                    <p class="quote-author">Nina Gjertsen // P3 Urørt</p>
+                </div>
+                <p>Seinere same vår ga dei ut to nye låtar og blei på nytt anbefalt av P3 Urørt 
+                    med VIL DU BLI MI. Med ei rekkje låtar på lager er dei meir enn klare til å setja 
+                    sitt preg på musikkarenaen.</p>
+            </div>
+        </div>
+
+        <!-- ROW 2: Text left, image right -->
+        <div class="epk-row reverse fade-in">
+            <div class="epk-text">
+                <h2>AMBISJONAR</h2>
+                <p>GUT har eit ønskje om at musikken og tekstane skal spegla 
+                    livet slik det faktisk er. Nokre dagar står ein midt i store tap og må bli kjent 
+                    med sitt djupaste indre, medan andre dagar er bekymringslause, og alt ein vil er 
+                    å dansa. Med dette som utgangspunkt håpar dei at prosjektet kan vekkja noko hos 
+                    lyttarane.</p>
+                <p>Vidare vil gjengen fortsetja å jobba målretta for å nå ut med 
+                    musikken sin og skaffa seg scener der dei kan visa fram sitt energiske live-show 
+                    og det prosjektet dei trur på og brenn for.</p>
+            </div>
+            <div class="epk-img">
+                <img src="images/GUTUNGEN.jpg" alt="GUT band">
+            </div>
         </div>
     </div>
 
-    <div class="social-media-container">
-        <div>
-            <a href="https://www.instagram.com/gutbandet" target="_blank" alt="Instagram Logo">
-                <img class="social-media-logos-bottom" src="images/Logos/white-insta.svg">
-            </a>
+    <!-- VIDEO SECTION -->
+    <section class="epk-video-section fade-in">
+        <h2>KANSKJE DU OG E</h2>
+        <p class="subtitle">LIVE PÅ LOFTET</p>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/Gytv51Ak4Is?si=mrj3kLUoI3aKixf8"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
         </div>
-        <div>
-            <a href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" alt="Spotify Logo">
-                <img class="social-media-logos-bottom" src="images/Logos/white-spotify.svg">
-            </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-socials">
+                <a class="social-icon" href="https://www.instagram.com/gutbandet" target="_blank" aria-label="Instagram">
+                    <img src="images/Logos/white-insta.svg" alt="Instagram">
+                </a>
+                <a class="social-icon" href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" aria-label="Spotify">
+                    <img src="images/Logos/white-spotify.svg" alt="Spotify">
+                </a>
+                <a class="social-icon" href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" aria-label="Apple Music">
+                    <img src="images/Logos/white-apple-music-filled.svg" alt="Apple Music">
+                </a>
+                <a class="social-icon" href="https://www.tiktok.com/@gutband" target="_blank" aria-label="TikTok">
+                    <img src="images/Logos/tiktok-round-white.svg" alt="TikTok">
+                </a>
+            </div>
         </div>
-        <div>
-            <a href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" alt="Apple Music Logo">
-                <img class="social-media-logos-am-bottom" src="images/Logos/white-apple-music-filled.svg">
-            </a>
-        </div>
-        <div>
-            <a href="https://www.tiktok.com/@gutband" target="_blank" alt="Apple Music Logo">
-                <img class="social-media-logos-bottom" src="images/Logos/tiktok-round-white.svg">
-            </a>
-        </div>
-    </div>
+    </footer>
+
+    <script src="scripts/nav.js"></script>
 </body>
 </html>

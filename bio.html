@@ -1,125 +1,123 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BIO</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/general.css">
-        <link rel="stylesheet" href="styles/bottom-element.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/header.css">
-        <link rel="stylesheet" href="styles/bio.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUT – Bio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <body>
-        <div class="header">
-            <div class="header-left">
-                <a class="menu-tab" href="index.html">
-                    HEIM
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/bio.css">
+</head>
+
+<body class="page-bio">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="site-logo">GUT</a>
+
+            <nav class="nav-desktop">
+                <a class="nav-link" href="index.html">HEIM</a>
+                <a class="nav-link active" href="bio.html">BIO</a>
+                <a class="nav-link" href="videos.html">VIDEOS</a>
+                <a class="nav-link" href="booking.html">BOOKING</a>
+            </nav>
+
+            <div class="header-socials">
+                <a class="social-icon" href="https://www.instagram.com/gutbandet" target="_blank" aria-label="Instagram">
+                    <img src="images/Logos/white-insta.svg" alt="Instagram">
                 </a>
-                <a class="menu-tab" href="booking.html">
-                    BOOKING
+                <a class="social-icon" href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" aria-label="Spotify">
+                    <img src="images/Logos/white-spotify.svg" alt="Spotify">
                 </a>
-                <a class="menu-tab" href="bio.html">
-                    <u>BIO</u>
+                <a class="social-icon" href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" aria-label="Apple Music">
+                    <img src="images/Logos/white-apple-music-filled.svg" alt="Apple Music">
                 </a>
-                <a class="menu-tab" href="videos.html">
-                    VIDEOS
+                <a class="social-icon" href="https://www.tiktok.com/@gutband" target="_blank" aria-label="TikTok">
+                    <img src="images/Logos/tiktok-round-white.svg" alt="TikTok">
                 </a>
             </div>
-            <div class="header-mid">
-                <a href="index.html">
-                    <p class="header-text">GUT</p>
-                </a>
 
-                <div class="dropdown">
-                    <img class="hamburger-icon" src="images/Logos/burger-menu.svg" alt="">
-                </div>
-            </div>
-            <div class="header-right">
-                <a class="social-media-link" href="https://www.instagram.com/gutbandet" target="_blank" alt="Instagram Logo">
-                    <img class="social-media-logos" src="images/Logos/instagram-circle-round-black.svg">
-                </a>
-                <a class="social-media-link" href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" alt="Spotify Logo">
-                    <img class="social-media-logos" src="images/Logos/spotify-logo-black.svg">
-                </a>
-                <a class="social-media-link" href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" alt="Apple Music Logo">
-                    <img class="social-media-logos" src="images/Logos/black-apple-music-round-circle.svg">
-                </a>
-                <a class="social-media-link" href="https://www.tiktok.com/@gutband" target="_blank" alt="Tiktok Logo">
-                    <img class="social-media-logos" src="images/Logos/tiktok-round-black.png">
-                </a>
+            <button class="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
+    <!-- MOBILE NAV -->
+    <nav class="nav-mobile">
+        <a class="nav-link" href="index.html">HEIM</a>
+        <a class="nav-link active" href="bio.html">BIO</a>
+        <a class="nav-link" href="videos.html">VIDEOS</a>
+        <a class="nav-link" href="booking.html">BOOKING</a>
+        <div class="mobile-socials">
+            <a class="social-icon" href="https://www.instagram.com/gutbandet" target="_blank" aria-label="Instagram">
+                <img src="images/Logos/white-insta.svg" alt="Instagram">
+            </a>
+            <a class="social-icon" href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" aria-label="Spotify">
+                <img src="images/Logos/white-spotify.svg" alt="Spotify">
+            </a>
+            <a class="social-icon" href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" aria-label="Apple Music">
+                <img src="images/Logos/white-apple-music-filled.svg" alt="Apple Music">
+            </a>
+            <a class="social-icon" href="https://www.tiktok.com/@gutband" target="_blank" aria-label="TikTok">
+                <img src="images/Logos/tiktok-round-white.svg" alt="TikTok">
+            </a>
+        </div>
+    </nav>
+
+    <!-- BIO SECTION -->
+    <section class="bio-section">
+        <div class="bio-content fade-in">
+            <h1 id="bio-header" class="bio-header"></h1>
+            <div id="bio-text-container"></div>
+            <div class="bio-quote">
+                <p id="bio-quote-text" class="bio-quote-text"></p>
+                <p id="bio-quote-author" class="bio-quote-author"></p>
             </div>
         </div>
+    </section>
 
-        <div class="dropdown-menu">
-            <img class="close-button" src="images/Logos/X.svg">
-            
-            <div class="menu-wrapper">
-                <a class="menu-tab" href="index.html">
-                    HEIM
-                </a>
-                <a class="menu-tab" href="booking.html">
-                    BOOKING
-                </a>
-                <a class="menu-tab" href="bio.html">
-                    <u>BIO</u>
-                </a>
-                <a class="menu-tab" href="videos.html">
-                    VIDEOS
-                </a>
-            </div>
+    <!-- BAND MEMBERS -->
+    <section class="members-section">
+        <div class="members-grid fade-in" id="members-grid">
+            <!-- Band members loaded by JavaScript -->
         </div>
+    </section>
 
-        <div class="band-bio">
-            <div class="bio-textbox">
-                <p id="bio-header" class="bio-header"></p>
-                <div id="bio-text-container"></div>
-                <p id="bio-quote-text" class="bio-text-quote"></p>
-                <p id="bio-quote-author" class="bio-text-nina"></p>
-            </div>
-        </div>
-
-        <div class="band-section">
-            <div class="band-presentation">
-                <!-- Band members will be loaded here by JavaScript -->
-            </div>
-        </div>
-
-        <div class="social-media-container">
-            <div>
-                <a href="https://www.instagram.com/gutbandet" target="_blank" alt="Instagram Logo">
-                    <img class="social-media-logos-bottom" src="images/Logos/white-insta.svg">
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-socials">
+                <a class="social-icon" href="https://www.instagram.com/gutbandet" target="_blank" aria-label="Instagram">
+                    <img src="images/Logos/white-insta.svg" alt="Instagram">
                 </a>
-            </div>
-            <div>
-                <a href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" alt="Spotify Logo">
-                    <img class="social-media-logos-bottom" src="images/Logos/white-spotify.svg">
+                <a class="social-icon" href="https://open.spotify.com/artist/1OpJU5KfvVC2sKJxxo8rWe" target="_blank" aria-label="Spotify">
+                    <img src="images/Logos/white-spotify.svg" alt="Spotify">
                 </a>
-            </div>
-            <div>
-                <a href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" alt="Apple Music Logo">
-                    <img class="social-media-logos-am-bottom" src="images/Logos/white-apple-music-filled.svg">
+                <a class="social-icon" href="https://music.apple.com/no/album/kanskje-du-og-e/1792891001?i=1792891346" target="_blank" aria-label="Apple Music">
+                    <img src="images/Logos/white-apple-music-filled.svg" alt="Apple Music">
                 </a>
-            </div>
-            <div>
-                <a href="https://www.tiktok.com/@gutband" target="_blank" alt="Apple Music Logo">
-                    <img class="social-media-logos-bottom" src="images/Logos/tiktok-round-white.svg">
+                <a class="social-icon" href="https://www.tiktok.com/@gutband" target="_blank" aria-label="TikTok">
+                    <img src="images/Logos/tiktok-round-white.svg" alt="TikTok">
                 </a>
             </div>
         </div>
-    </body>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="someJava.js"></script> 
-    <script src="bio-loader.js"></script> 
+    <script src="scripts/nav.js"></script>
+    <script src="bio-loader.js"></script>
+</body>
 </html>
