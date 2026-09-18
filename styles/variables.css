@@ -4,17 +4,18 @@
 
 :root {
     /* Colors */
-    --color-dark:        #111111;
-    --color-dark-soft:   #1a1a1a;
-    --color-dark-card:   #222222;
-    --color-light:       #f5f2ee;
-    --color-light-alt:   #ebe7e1;
-    --color-white:       #ffffff;
-    --color-text-dark:   #1a1a1a;
-    --color-text-light:  #f0f0f0;
-    --color-text-muted:  #888888;
-    --color-accent:      #5b7fa3;
-    --color-accent-hover:#7a9bbd;
+    --color-dark:        #45443f;
+    --color-dark-soft:   #55534c;
+    --color-dark-card:   #5e5a51;
+    --color-light:       #e9e0ca;
+    --color-light-alt:   #ded2b8;
+    --color-white:       #f3ead5;
+    --color-text-dark:   #484740;
+    --color-text-light:  #eee5d1;
+    --color-text-muted:  #7b766a;
+    --color-accent:      #bd6d3c;
+    --color-accent-hover:#d4874e;
+    --color-sunset:      #e1a04f;
 
     /* Typography */
     --font-display: "Bebas Neue", Arial, Helvetica, sans-serif;
@@ -32,7 +33,7 @@
     /* Layout */
     --max-width:    1200px;
     --header-height: 80px;
-    --border-radius: 8px;
+    --border-radius: 0;
 
     /* Transitions */
     --transition-fast: 150ms ease;

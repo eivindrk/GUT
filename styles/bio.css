@@ -5,7 +5,7 @@
 /* ---------- BIO TEXT SECTION ---------- */
 .bio-section {
     padding: var(--space-2xl) 0;
-    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-light) 100%);
+    background: var(--color-light);
 }
 
 .bio-content {
@@ -19,6 +19,8 @@
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: var(--space-lg);
     color: var(--color-text-dark);
+    border-bottom: 8px solid var(--color-accent);
+    padding-bottom: var(--space-sm);
 }
 
 .bio-text {
@@ -33,8 +35,8 @@
 .bio-quote {
     margin: var(--space-xl) 0;
     padding: var(--space-lg) var(--space-xl);
-    border-left: 4px solid var(--color-accent);
-    background-color: rgba(0, 0, 0, 0.03);
+    border-left: 8px solid var(--color-accent);
+    background-color: var(--color-light-alt);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
@@ -55,8 +57,9 @@
 
 /* ---------- BAND MEMBERS SECTION ---------- */
 .members-section {
-    background-color: var(--color-dark);
+    background-color: var(--color-light-alt);
     padding: var(--space-2xl) 0;
+    border-top: 1px solid rgba(72, 71, 64, 0.45);
 }
 
 .members-grid {
@@ -76,7 +79,7 @@
     width: 100%;
     aspect-ratio: 2 / 3;
     overflow: hidden;
-    border-radius: var(--border-radius);
+    border: 1px solid var(--color-dark);
     margin-bottom: var(--space-md);
     background-color: var(--color-dark-card);
 }
@@ -86,6 +89,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-slow);
+    filter: saturate(0.65) sepia(0.14) contrast(0.9);
 }
 
 .member-card:hover .member-img-wrapper img {
@@ -95,7 +99,7 @@
 .member-name {
     font-family: var(--font-display);
     font-size: clamp(1rem, 1.2vw, 1.3rem);
-    color: var(--color-white);
+    color: var(--color-text-dark);
     margin-bottom: var(--space-xs);
     letter-spacing: 0.03em;
 }
@@ -103,7 +107,9 @@
 .member-role {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--color-text-muted);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 /* ---------- RESPONSIVE ---------- */
