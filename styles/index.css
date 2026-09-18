@@ -10,22 +10,40 @@ body.page-index {
 /* Make header transparent on top of hero */
 body.page-index .site-header {
     background-color: transparent;
+    border-color: transparent;
 }
 
 body.page-index .site-header.scrolled {
-    background-color: var(--color-dark);
+    background-color: rgba(69, 68, 63, 0.96);
+    border-color: rgba(233, 224, 202, 0.35);
+}
+
+body.page-index .site-header:not(.scrolled) .site-logo,
+body.page-index .site-header:not(.scrolled) .nav-link {
+    color: var(--color-text-light);
+}
+
+body.page-index .site-header:not(.scrolled) .header-socials img {
+    filter: none;
+}
+
+body.page-index .site-header:not(.scrolled) .hamburger-btn span {
+    background-color: var(--color-light);
 }
 
 /* ---------- HERO ---------- */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     min-height: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background:
+        radial-gradient(circle at 50% 54%, rgba(225, 160, 79, 0.18), transparent 31%),
+        var(--color-light);
 }
 
 .hero-image {
@@ -38,6 +56,7 @@ body.page-index .site-header.scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: saturate(0.68) sepia(0.18) contrast(0.9);
 }
 
 /* Desktop image by default, mobile hidden */
@@ -48,12 +67,9 @@ body.page-index .site-header.scrolled {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.1) 40%,
-        rgba(0, 0, 0, 0.5) 100%
-    );
+    background:
+        linear-gradient(180deg, rgba(53, 51, 45, 0.55) 0%, rgba(53, 51, 45, 0.06) 36%, rgba(53, 51, 45, 0.52) 100%),
+        linear-gradient(90deg, rgba(189, 109, 60, 0.13), transparent 55%);
     z-index: 1;
 }
 
@@ -64,22 +80,25 @@ body.page-index .site-header.scrolled {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-lg);
+    gap: var(--space-sm);
+    width: min(88vw, 1180px);
 }
 
 .hero-logo {
     font-family: var(--font-display);
-    font-size: clamp(6rem, 15vw, 12rem);
-    color: var(--color-white);
-    letter-spacing: 0.08em;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    line-height: 1;
+    width: 100%;
+    font-size: clamp(9rem, 27vw, 22rem);
+    color: var(--color-light);
+    letter-spacing: 0.055em;
+    line-height: 0.78;
+    text-shadow: 8px 8px 0 rgba(72, 71, 64, 0.52);
 }
 
 /* ---------- LATEST RELEASE SECTION ---------- */
 .release-section {
-    background-color: var(--color-dark);
-    padding: var(--space-2xl) var(--space-lg);
+    background-color: var(--color-light-alt);
+    padding: clamp(4rem, 9vw, 8rem) var(--space-lg);
+    border-top: 1px solid rgba(72, 71, 64, 0.45);
 }
 
 .release-inner {
@@ -95,15 +114,15 @@ body.page-index .site-header.scrolled {
     flex-shrink: 0;
     width: 380px;
     height: 380px;
-    border-radius: var(--border-radius);
+    border: 1px solid rgba(72, 71, 64, 0.5);
     overflow: hidden;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    box-shadow: 14px 14px 0 var(--color-dark);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .release-cover:hover {
-    transform: scale(1.03);
-    box-shadow: 0 20px 56px rgba(0, 0, 0, 0.6);
+    transform: translate(4px, 4px);
+    box-shadow: 10px 10px 0 var(--color-dark);
 }
 
 .release-cover img {
@@ -129,7 +148,7 @@ body.page-index .site-header.scrolled {
 .release-title {
     font-family: var(--font-display);
     font-size: clamp(3rem, 6vw, 5rem);
-    color: var(--color-white);
+    color: var(--color-text-dark);
     line-height: 1;
     letter-spacing: 0.03em;
 }
@@ -148,7 +167,7 @@ body.page-index .site-header.scrolled {
     }
 
     .hero-logo {
-        font-size: clamp(5rem, 20vw, 8rem);
+        font-size: clamp(8rem, 42vw, 15rem);
     }
 
     .release-section {
