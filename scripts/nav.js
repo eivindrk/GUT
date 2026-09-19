@@ -73,4 +73,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         fadeElements.forEach(el => observer.observe(el));
     }
+
+    // ---------- RELEASE CATALOG ----------
+    const catalogTrack = document.querySelector('.catalog-track');
+    const catalogPrev = document.querySelector('.catalog-arrow--prev');
+    const catalogNext = document.querySelector('.catalog-arrow--next');
+
+    if (catalogTrack && catalogPrev && catalogNext) {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const updateCatalogControls = () => {
+            const maxScroll = catalogTrack.scrollWidth - catalogTrack.clientWidth;
+            catalogPrev.disabled = catalogTrack.scrollLeft <= 2;
+            catalogNext.disabled = catalogTrack.scrollLeft >= maxScroll - 2;
+        };
+
+        const scrollCatalog = (direction) => {
+            const card = catalogTrack.querySelector('.release-card');
+            const gap = parseFloat(getComputedStyle(catalogTrack).columnGap) || 0;
+            const distance = card ? card.getBoundingClientRect().width + gap : catalogTrack.clientWidth;
+
+            catalogTrack.scrollBy({
+                left: direction * distance,
+                behavior: prefersReducedMotion ? 'auto' : 'smooth'
+            });
+        };
+
+        catalogPrev.addEventListener('click', () => scrollCatalog(-1));
+        catalogNext.addEventListener('click', () => scrollCatalog(1));
+        catalogTrack.addEventListener('scroll', () => requestAnimationFrame(updateCatalogControls), { passive: true });
+        window.addEventListener('resize', updateCatalogControls, { passive: true });
+        updateCatalogControls();
+    }
 });
