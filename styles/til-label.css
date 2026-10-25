@@ -1,0 +1,227 @@
+/* Label-specific additions layered on top of epk.css. */
+
+.epk-img img.original-colors {
+    filter: saturate(0.42) contrast(0.94) brightness(0.96);
+}
+
+.epk-photo-credit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin-right: -2.5vw;
+    padding: 0.65rem 0 0;
+    color: var(--color-text-dark);
+    font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+    font-style: italic;
+    line-height: 1;
+    text-align: left;
+}
+
+.epk-curved-arrow {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: clamp(6rem, 8vw, 9rem);
+    height: clamp(3.2rem, 4.2vw, 4.8rem);
+    background-color: var(--color-accent);
+    -webkit-mask: url("../images/curved-arrow.png") center / 100% 100% no-repeat;
+    mask: url("../images/curved-arrow.png") center / 100% 100% no-repeat;
+    transform: scaleY(-1);
+}
+
+/* ---------- MUSIC SECTION ---------- */
+.epk-music-section {
+    background-image: url("../images/GUT-LOGO-BACKGROUND.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: clamp(4rem, 7vw, 7rem) max(var(--space-lg), calc((100vw - var(--max-width)) / 2));
+    text-align: center;
+    position: relative;
+}
+
+.epk-music-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(72, 71, 64, 0.64);
+    z-index: 0;
+}
+
+.epk-music-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.epk-music-kicker {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-sunset);
+    letter-spacing: 0.18em;
+    margin-bottom: var(--space-xs);
+}
+
+.epk-music-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    color: var(--color-white);
+    margin-bottom: var(--space-xl);
+    letter-spacing: 0.05em;
+}
+
+.epk-releases {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    text-align: left;
+}
+
+.epk-release-card {
+    position: relative;
+    display: grid;
+    align-content: start;
+    color: var(--color-white);
+}
+
+.epk-release-card:hover {
+    opacity: 1;
+}
+
+.epk-release-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid rgba(243, 234, 213, 0.6);
+    box-shadow: 7px 7px 0 var(--color-dark);
+    margin-bottom: var(--space-lg);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+a.epk-release-card:hover img,
+a.epk-release-card:focus-visible img {
+    transform: translate(3px, 3px);
+    box-shadow: 4px 4px 0 var(--color-accent);
+}
+
+.epk-release-card-upcoming::before {
+    content: "SNART";
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    z-index: 1;
+    padding: 0.35rem 0.65rem 0.25rem;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    font: 400 1rem/1 var(--font-display);
+    letter-spacing: 0.12em;
+}
+
+.epk-release-meta {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-sunset);
+    letter-spacing: 0.14em;
+    margin-bottom: 0.2rem;
+}
+
+.epk-release-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    line-height: 1;
+    letter-spacing: 0.045em;
+}
+
+.epk-demos {
+    margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.epk-demo-buttons {
+    --epk-demo-gap: clamp(1.25rem, 3vw, 2.5rem);
+    display: flex;
+    justify-content: center;
+    gap: var(--epk-demo-gap);
+}
+
+.epk-demo-item {
+    width: calc((100% - 2 * var(--epk-demo-gap)) / 3);
+    min-width: 0;
+}
+
+.epk-demo-button {
+    width: 100%;
+    aspect-ratio: 1;
+    padding: var(--space-lg);
+    border: 1px solid rgba(243, 234, 213, 0.6);
+    border-radius: 0;
+    color: var(--color-light);
+    background-color: rgba(72, 71, 64, 0.78);
+    box-shadow: 7px 7px 0 var(--color-dark);
+    font: 400 clamp(1.6rem, 3vw, 2.7rem)/1 var(--font-display);
+    letter-spacing: 0.07em;
+    cursor: pointer;
+    transition: color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.epk-demo-button span {
+    display: block;
+    margin-top: var(--space-sm);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-sunset);
+}
+
+.epk-demo-button:hover,
+.epk-demo-button:focus-visible {
+    color: var(--color-dark);
+    background-color: var(--color-sunset);
+    box-shadow: 4px 4px 0 var(--color-accent);
+    transform: translate(3px, 3px);
+}
+
+.epk-demo-button:hover span,
+.epk-demo-button:focus-visible span {
+    color: var(--color-dark);
+}
+
+.epk-demo-note {
+    margin-top: var(--space-sm);
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    font-style: italic;
+    letter-spacing: 0.08em;
+}
+
+@media screen and (max-width: 768px) {
+    .epk-photo-credit {
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .epk-curved-arrow {
+        transform: none;
+    }
+
+    .epk-music-section {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .epk-releases {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .epk-demo-buttons {
+        flex-direction: column;
+        gap: var(--space-xl);
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .epk-demo-item {
+        width: 100%;
+    }
+}
