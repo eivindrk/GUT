@@ -32,7 +32,7 @@
 
 /* ---------- MUSIC SECTION ---------- */
 .epk-music-section {
-    --epk-music-padding-block: clamp(4rem, 7vw, 7rem);
+    --epk-music-padding-block: clamp(5rem, 8vw, 8rem);
     background-image: url("../images/GUT-LOGO-BACKGROUND.jpg");
     background-size: cover;
     background-position: center;
@@ -75,6 +75,9 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: clamp(1.25rem, 3vw, 2.5rem);
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -176,9 +179,12 @@
 }
 
 .epk-video {
+    display: grid;
+    align-content: center;
     width: 100vw;
+    min-height: 100svh;
     max-width: none;
-    margin: clamp(3rem, 7vw, 6rem) 0 calc(-1 * var(--epk-music-padding-block)) calc(50% - 50vw);
+    margin: clamp(5rem, 10vw, 9rem) 0 calc(-1 * var(--epk-music-padding-block)) calc(50% - 50vw);
     padding: clamp(2rem, 5vw, 4rem) max(var(--space-md), calc((100vw - 960px) / 2));
     background:
         linear-gradient(rgba(28, 30, 25, 0.36), rgba(28, 30, 25, 0.58)),
@@ -188,6 +194,7 @@
 }
 
 .epk-video h3 {
+    width: 100%;
     max-width: 960px;
     margin-right: auto;
     margin-left: auto;
@@ -199,6 +206,7 @@
 }
 
 .epk-video-frame {
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
     aspect-ratio: 16 / 9;
