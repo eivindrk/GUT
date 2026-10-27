@@ -72,7 +72,7 @@
 
 .epk-releases {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: clamp(1.25rem, 3vw, 2.5rem);
     text-align: left;
 }
@@ -82,6 +82,11 @@
     display: grid;
     align-content: start;
     color: var(--color-white);
+}
+
+.epk-release-link {
+    display: grid;
+    color: inherit;
 }
 
 .epk-release-card:hover {
@@ -98,8 +103,8 @@
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-a.epk-release-card:hover img,
-a.epk-release-card:focus-visible img {
+.epk-release-link:hover img,
+.epk-release-link:focus-visible img {
     transform: translate(3px, 3px);
     box-shadow: 4px 4px 0 var(--color-accent);
 }
@@ -133,6 +138,42 @@ a.epk-release-card:focus-visible img {
     letter-spacing: 0.045em;
 }
 
+.epk-audio-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xs);
+    align-self: end;
+    margin-top: var(--space-lg);
+}
+
+.epk-audio-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-width: 0;
+    padding: 0.7rem 0.45rem 0.55rem;
+    border: 1px solid var(--color-light);
+    border-radius: 0;
+    color: var(--color-light);
+    background: rgba(72, 71, 64, 0.78);
+    font: 400 clamp(0.8rem, 1.2vw, 1rem)/1 var(--font-display);
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: color var(--transition-fast), background-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.epk-audio-button:hover:not(:disabled),
+.epk-audio-button:focus-visible:not(:disabled) {
+    color: var(--color-dark);
+    background-color: var(--color-sunset);
+}
+
+.epk-audio-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
 .epk-demos {
     margin-top: clamp(3rem, 6vw, 5rem);
 }
@@ -145,7 +186,7 @@ a.epk-release-card:focus-visible img {
 }
 
 .epk-demo-item {
-    width: calc((100% - 2 * var(--epk-demo-gap)) / 3);
+    width: 100%;
     min-width: 0;
 }
 
@@ -160,8 +201,6 @@ a.epk-release-card:focus-visible img {
     box-shadow: 7px 7px 0 var(--color-dark);
     font: 400 clamp(1.6rem, 3vw, 2.7rem)/1 var(--font-display);
     letter-spacing: 0.07em;
-    cursor: pointer;
-    transition: color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .epk-demo-button span {
@@ -170,19 +209,6 @@ a.epk-release-card:focus-visible img {
     font-family: var(--font-body);
     font-size: 0.85rem;
     color: var(--color-sunset);
-}
-
-.epk-demo-button:hover,
-.epk-demo-button:focus-visible {
-    color: var(--color-dark);
-    background-color: var(--color-sunset);
-    box-shadow: 4px 4px 0 var(--color-accent);
-    transform: translate(3px, 3px);
-}
-
-.epk-demo-button:hover span,
-.epk-demo-button:focus-visible span {
-    color: var(--color-dark);
 }
 
 .epk-demo-note {
@@ -208,10 +234,8 @@ a.epk-release-card:focus-visible img {
     }
 
     .epk-releases {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-        max-width: 420px;
-        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-xl) var(--space-sm);
     }
 
     .epk-demo-buttons {

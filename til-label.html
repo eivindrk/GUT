@@ -73,35 +73,75 @@
         <p class="epk-music-kicker">UTVALDE UTGIVINGAR</p>
         <h2 id="epk-music-title">MUSIKK</h2>
         <div class="epk-releases">
-            <a class="epk-release-card" href="https://open.spotify.com/track/3s9U26KQ7ryswmToTPCC7f" target="_blank" rel="noopener noreferrer">
-                <img src="images/Album-covers/KANSKJE_DU_OG_E_COVER.jpg" alt="KANSKJE DU OG E">
-                <span class="epk-release-meta">SINGEL · 2025</span>
-                <span class="epk-release-title">KANSKJE DU OG E</span>
-            </a>
+            <article class="epk-release-card">
+                <a class="epk-release-link" href="https://open.spotify.com/track/3s9U26KQ7ryswmToTPCC7f" target="_blank" rel="noopener noreferrer">
+                    <img src="images/Album-covers/KANSKJE_DU_OG_E_COVER.jpg" alt="KANSKJE DU OG E">
+                    <span class="epk-release-meta">SINGEL · 2025</span>
+                    <span class="epk-release-title">KANSKJE DU OG E</span>
+                </a>
+                <div class="epk-audio-controls" data-audio-player>
+                    <audio preload="metadata" src="audio/KANSKJE-DU-OG-E.wav"></audio>
+                    <button class="epk-audio-button" type="button" data-audio-toggle aria-label="Spill KANSKJE DU OG E">
+                        <span data-audio-icon aria-hidden="true">▶</span>
+                        <span data-audio-label>PLAY</span>
+                    </button>
+                    <button class="epk-audio-button" type="button" data-audio-restart aria-label="Start KANSKJE DU OG E på nytt" disabled>
+                        <span aria-hidden="true">↺</span>
+                        <span>RESTART</span>
+                    </button>
+                </div>
+            </article>
 
-            <a class="epk-release-card" href="https://open.spotify.com/track/1kOTD2xp4AySQwYiZWgA0m" target="_blank" rel="noopener noreferrer">
-                <img src="images/Album-covers/GI-ME-NOKO-MEIR-COVER.png" alt="GI ME NOKO MEIR">
-                <span class="epk-release-meta">SINGEL · 2026</span>
-                <span class="epk-release-title">GI ME NOKO MEIR</span>
-            </a>
+            <article class="epk-release-card">
+                <a class="epk-release-link" href="https://open.spotify.com/track/1kOTD2xp4AySQwYiZWgA0m" target="_blank" rel="noopener noreferrer">
+                    <img src="images/Album-covers/GI-ME-NOKO-MEIR-COVER.png" alt="GI ME NOKO MEIR">
+                    <span class="epk-release-meta">SINGEL · 2026</span>
+                    <span class="epk-release-title">GI ME NOKO MEIR</span>
+                </a>
+                <div class="epk-audio-controls" data-audio-player>
+                    <audio preload="metadata" src="audio/GI-ME-NOKO-MEIR.wav"></audio>
+                    <button class="epk-audio-button" type="button" data-audio-toggle aria-label="Spill GI ME NOKO MEIR">
+                        <span data-audio-icon aria-hidden="true">▶</span>
+                        <span data-audio-label>PLAY</span>
+                    </button>
+                    <button class="epk-audio-button" type="button" data-audio-restart aria-label="Start GI ME NOKO MEIR på nytt" disabled>
+                        <span aria-hidden="true">↺</span>
+                        <span>RESTART</span>
+                    </button>
+                </div>
+            </article>
 
             <article class="epk-release-card epk-release-card-upcoming">
                 <img src="images/Album-covers/FIGUREN-AV-DE-cover.png" alt="FIGUREN AV DE">
                 <span class="epk-release-meta">TBA · 2026</span>
                 <span class="epk-release-title">FIGUREN AV DE</span>
+                <div class="epk-audio-controls" data-audio-player>
+                    <audio preload="metadata" src="audio/FIGUREN-AV-DE.wav"></audio>
+                    <button class="epk-audio-button" type="button" data-audio-toggle aria-label="Spill FIGUREN AV DE">
+                        <span data-audio-icon aria-hidden="true">▶</span>
+                        <span data-audio-label>PLAY</span>
+                    </button>
+                    <button class="epk-audio-button" type="button" data-audio-restart aria-label="Start FIGUREN AV DE på nytt" disabled>
+                        <span aria-hidden="true">↺</span>
+                        <span>RESTART</span>
+                    </button>
+                </div>
             </article>
-        </div>
-        <div class="epk-demos">
-            <div class="epk-demo-buttons">
-                <div class="epk-demo-item">
-                    <button class="epk-demo-button" type="button">HEI DU <span>— demo</span></button>
-                    <p class="epk-demo-note">ikke mastret</p>
+
+            <article class="epk-release-card epk-demo-item">
+                <div class="epk-demo-button">DANSE FOR ME SJØL <span>— demo</span></div>
+                <p class="epk-demo-note">ikke mastret</p>
+                <div class="epk-audio-controls" aria-label="Lydklipp ikke tilgjengelig">
+                    <button class="epk-audio-button" type="button" disabled>
+                        <span aria-hidden="true">▶</span>
+                        <span>PLAY</span>
+                    </button>
+                    <button class="epk-audio-button" type="button" disabled>
+                        <span aria-hidden="true">↺</span>
+                        <span>RESTART</span>
+                    </button>
                 </div>
-                <div class="epk-demo-item">
-                    <button class="epk-demo-button" type="button">DANSE FOR ME SJØL <span>— demo</span></button>
-                    <p class="epk-demo-note">ikke mastret</p>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -126,5 +166,6 @@
     </footer>
 
     <script src="scripts/nav.js"></script>
+    <script src="scripts/audio-player.js"></script>
 </body>
 </html>
