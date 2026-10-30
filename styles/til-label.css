@@ -4,6 +4,15 @@
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
 
+.epk-img-letterbox {
+    background-color: #000;
+}
+
+.epk-img-letterbox img {
+    object-fit: contain;
+    filter: none;
+}
+
 /* ---------- MUSIC SECTION ---------- */
 .epk-music-section {
     --epk-music-padding-block: clamp(5rem, 8vw, 8rem);
