@@ -4,32 +4,6 @@
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
 
-.epk-photo-credit {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 0.25rem;
-    margin-right: -2.5vw;
-    padding: 0.65rem 0 0;
-    color: var(--color-text-dark);
-    font-size: clamp(0.85rem, 1.2vw, 1.05rem);
-    font-style: italic;
-    line-height: 1;
-    text-align: left;
-}
-
-.epk-curved-arrow {
-    display: inline-block;
-    flex: 0 0 auto;
-    width: clamp(6rem, 8vw, 9rem);
-    height: clamp(3.2rem, 4.2vw, 4.8rem);
-    background-color: var(--color-accent);
-    -webkit-mask: url("../images/curved-arrow.png") center / 100% 100% no-repeat;
-    mask: url("../images/curved-arrow.png") center / 100% 100% no-repeat;
-    transform: scaleY(-1);
-}
-
 /* ---------- MUSIC SECTION ---------- */
 .epk-music-section {
     --epk-music-padding-block: clamp(5rem, 8vw, 8rem);
@@ -271,15 +245,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .epk-photo-credit {
-        align-items: center;
-        margin-right: 0;
-    }
-
-    .epk-curved-arrow {
-        transform: none;
-    }
-
     .epk-music-section {
         --epk-music-padding-block: var(--space-xl);
         padding: var(--space-xl) var(--space-md);

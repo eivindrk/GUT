@@ -58,10 +58,6 @@
                 <p>Konsert våren 2027</p>
                 <p>Legge inn støt på Insta og Tiktok</p>
                 <p>Vi elsker å lage jordnær, smakfull og relaterbar musikk som favner brett! Det har vi ambisjon om å fortsette med. Tekstene spenner fra det banale og gjenkjennelige, som tankekjøret før man tør å spørre ut crushet, til det dypt personlige og sårbare, som å miste moren sin til kreft, slik vi skildrer i «FIGUREN AV DE». Vi er overbevist om at musikken vår på en god måte kan treffe en nerve hos lytterne.</p>
-                <p class="epk-photo-credit">
-                    <span class="epk-curved-arrow" aria-hidden="true"></span>
-                    <span>fra IDYLL shoot med Celine Rensel</span>
-                </p>
             </div>
             <div class="epk-img">
                 <img class="original-colors" src="images/IDYLL-shoot/GUT - Idyll-2.jpg" alt="GUT band">
@@ -126,12 +122,13 @@
             <article class="epk-release-card epk-demo-item">
                 <div class="epk-demo-button">DANSE FOR ME SJØL <span>— demo</span></div>
                 <p class="epk-demo-note">ikke mastret</p>
-                <div class="epk-audio-controls" aria-label="Lydklipp ikke tilgjengelig">
-                    <button class="epk-audio-button" type="button" disabled>
-                        <span aria-hidden="true">▶</span>
-                        <span>PLAY</span>
+                <div class="epk-audio-controls" data-audio-player>
+                    <audio preload="auto" src="audio/DANSE-FOR-ME-SJØL.mp3"></audio>
+                    <button class="epk-audio-button" type="button" data-audio-toggle aria-label="Spill DANSE FOR ME SJØL">
+                        <span data-audio-icon aria-hidden="true">▶</span>
+                        <span data-audio-label>PLAY</span>
                     </button>
-                    <button class="epk-audio-button" type="button" disabled>
+                    <button class="epk-audio-button" type="button" data-audio-restart aria-label="Start DANSE FOR ME SJØL på nytt" disabled>
                         <span aria-hidden="true">↺</span>
                         <span>RESTART</span>
                     </button>
