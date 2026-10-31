@@ -1,23 +1,5 @@
 /* Label-specific additions layered on top of epk.css. */
 
-.epk-content {
-    max-width: 1400px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.epk-img {
-    min-height: min(45vw, 36rem);
-}
-
-.epk-text h2 {
-    font-size: clamp(2.5rem, 5vw, 4.75rem);
-}
-
-.epk-text p {
-    font-size: clamp(1.05rem, 1.35vw, 1.2rem);
-}
-
 .epk-img img.original-colors {
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
@@ -282,7 +264,7 @@
     }
 
     .epk-img {
-        min-height: min(45vw, 36rem);
+        min-height: 45vw;
     }
 
     .epk-text {
@@ -290,12 +272,16 @@
     }
 
     .epk-text h2 {
-        font-size: clamp(2.5rem, 5vw, 4.75rem);
+        font-size: 7vw;
     }
 
     .epk-text p {
-        font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+        font-size: 1.55vw;
         line-height: 1.2em;
         text-align: justify;
+    }
+
+    .epk-quote .quote-author {
+        font-size: 1.55vw;
     }
 }
