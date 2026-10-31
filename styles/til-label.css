@@ -1,5 +1,23 @@
 /* Label-specific additions layered on top of epk.css. */
 
+.epk-content {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.epk-img {
+    min-height: min(45vw, 36rem);
+}
+
+.epk-text h2 {
+    font-size: clamp(2.5rem, 5vw, 4.75rem);
+}
+
+.epk-text p {
+    font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+}
+
 .epk-img img.original-colors {
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
@@ -254,24 +272,30 @@
 }
 
 @media screen and (max-width: 768px) {
-    .epk-music-section {
-        --epk-music-padding-block: var(--space-xl);
-        padding: var(--space-xl) var(--space-md);
+    .epk-hero {
+        height: 36vw;
+        min-height: 400px;
     }
 
-    .epk-releases {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-xl) var(--space-sm);
+    .epk-row {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .epk-demo-buttons {
-        flex-direction: column;
-        gap: var(--space-xl);
-        max-width: 420px;
-        margin: 0 auto;
+    .epk-img {
+        min-height: min(45vw, 36rem);
     }
 
-    .epk-demo-item {
-        width: 100%;
+    .epk-text {
+        padding: 3vw 4vw;
+    }
+
+    .epk-text h2 {
+        font-size: clamp(2.5rem, 5vw, 4.75rem);
+    }
+
+    .epk-text p {
+        font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+        line-height: 1.2em;
+        text-align: justify;
     }
 }
