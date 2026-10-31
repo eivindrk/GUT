@@ -254,24 +254,34 @@
 }
 
 @media screen and (max-width: 768px) {
-    .epk-music-section {
-        --epk-music-padding-block: var(--space-xl);
-        padding: var(--space-xl) var(--space-md);
+    .epk-hero {
+        height: 36vw;
+        min-height: 400px;
     }
 
-    .epk-releases {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-xl) var(--space-sm);
+    .epk-row {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .epk-demo-buttons {
-        flex-direction: column;
-        gap: var(--space-xl);
-        max-width: 420px;
-        margin: 0 auto;
+    .epk-img {
+        min-height: 45vw;
     }
 
-    .epk-demo-item {
-        width: 100%;
+    .epk-text {
+        padding: 3vw 4vw;
+    }
+
+    .epk-text h2 {
+        font-size: 7vw;
+    }
+
+    .epk-text p {
+        font-size: 1.55vw;
+        line-height: 1.2em;
+        text-align: justify;
+    }
+
+    .epk-quote .quote-author {
+        font-size: 1.55vw;
     }
 }
