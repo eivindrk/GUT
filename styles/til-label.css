@@ -127,13 +127,29 @@
 
 .epk-audio-controls {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-xs);
     align-self: end;
     margin-top: var(--space-xs);
 }
 
+.epk-audio-seek {
+    position: relative;
+    height: 0.7rem;
+    border: 1px solid var(--color-light);
+    background: rgba(72, 71, 64, 0.78);
+    cursor: pointer;
+    touch-action: none;
+}
+
+.epk-audio-seek-fill {
+    width: 0;
+    height: 100%;
+    background-color: var(--color-sunset);
+    pointer-events: none;
+}
+
 .epk-audio-button {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -148,6 +164,30 @@
     letter-spacing: 0.06em;
     cursor: pointer;
     transition: color var(--transition-fast), background-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.epk-audio-spinner {
+    display: none;
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: epk-audio-spin 0.7s linear infinite;
+}
+
+.epk-audio-button.is-loading .epk-audio-spinner {
+    display: block;
+}
+
+.epk-audio-button.is-loading [data-audio-icon] {
+    display: none;
+}
+
+@keyframes epk-audio-spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .epk-audio-button:hover:not(:disabled),
