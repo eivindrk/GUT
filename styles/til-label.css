@@ -1,5 +1,78 @@
 /* Label-specific additions layered on top of epk.css. */
 
+.epk-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    min-height: 500px;
+    background:
+        radial-gradient(circle at 50% 54%, rgba(225, 160, 79, 0.18), transparent 31%),
+        var(--color-light);
+}
+
+.epk-hero .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.epk-hero .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.68) sepia(0.18) contrast(0.9);
+}
+
+.epk-hero .hero-img-mobile {
+    display: none;
+}
+
+html.is-phone .epk-hero .hero-img-desktop {
+    display: none;
+}
+
+html.is-phone .epk-hero .hero-img-mobile {
+    display: block;
+}
+
+html.is-phone .epk-hero .hero-logo {
+    font-size: clamp(8rem, 42vw, 15rem);
+}
+
+.epk-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(180deg, rgba(53, 51, 45, 0.55) 0%, rgba(53, 51, 45, 0.06) 36%, rgba(53, 51, 45, 0.52) 100%),
+        linear-gradient(90deg, rgba(189, 109, 60, 0.13), transparent 55%);
+}
+
+.epk-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(88vw, 1180px);
+    text-align: center;
+}
+
+.epk-hero .hero-logo {
+    width: 100%;
+    color: var(--color-light);
+    font-family: var(--font-display);
+    font-size: clamp(9rem, 27vw, 22rem);
+    letter-spacing: 0.055em;
+    line-height: 0.78;
+    text-shadow: 8px 8px 0 rgba(72, 71, 64, 0.52);
+}
+
+.epk-content {
+    padding: 0;
+}
+
 .epk-img img.original-colors {
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
@@ -295,8 +368,16 @@
 
 @media screen and (max-width: 768px) {
     .epk-hero {
-        height: 36vw;
-        min-height: 400px;
+        height: 100svh;
+        min-height: 500px;
+    }
+
+    .epk-hero .hero-img-desktop {
+        display: none;
+    }
+
+    .epk-hero .hero-img-mobile {
+        display: block;
     }
 
     .epk-row {
