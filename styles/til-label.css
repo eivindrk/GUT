@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     height: 100svh;
-    min-height: 500px;
+    min-height: 100vh;
     background:
         radial-gradient(circle at 50% 54%, rgba(225, 160, 79, 0.18), transparent 31%),
         var(--color-light);
@@ -38,6 +39,20 @@ html.is-phone .epk-hero .hero-img-mobile {
 
 html.is-phone .epk-hero .hero-logo {
     font-size: clamp(8rem, 42vw, 15rem);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .epk-hero .hero-img-desktop {
+        display: none;
+    }
+
+    .epk-hero .hero-img-mobile {
+        display: block;
+    }
+
+    .epk-hero .hero-logo {
+        font-size: clamp(8rem, 42vw, 15rem);
+    }
 }
 
 .epk-hero .hero-overlay {

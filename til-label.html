@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=1400">
     <title>GUT – EPK til label</title>
     <script>
-        if (window.screen.width <= 768) {
-            document.documentElement.classList.add('is-phone');
-        }
+        (function () {
+            var shortSide = Math.min(window.screen.width, window.screen.height);
+            var touch = navigator.maxTouchPoints > 0 || window.matchMedia('(pointer: coarse)').matches;
+            if (shortSide <= 768 || (touch && shortSide <= 1400)) {
+                document.documentElement.classList.add('is-phone');
+            }
+        })();
     </script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
