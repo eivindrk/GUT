@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1400">
     <title>GUT – EPK til label</title>
+    <script>
+        if (window.screen.width <= 768) {
+            document.documentElement.classList.add('is-phone');
+        }
+    </script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Fonts -->
@@ -24,20 +29,22 @@
 
     <!-- EPK HERO -->
     <section class="epk-hero">
-        <img src="images/GUT-LOGO-BACKGROUND.jpg" alt="GUT">
-        <div class="epk-hero-overlay">
-            <span class="epk-logo">GUT</span>
+        <div class="hero-image">
+            <img class="hero-img-desktop" src="images/GUT-live.jpg" alt="GUT live">
+            <img class="hero-img-mobile" src="images/Header-pic.png" alt="GUT">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-logo">GUT</span>
         </div>
     </section>
 
     <!-- EPK CONTENT -->
     <div class="epk-content">
-        <a href="index.html" class="epk-back-link">&larr; TILBAKE TIL GUTBANDET.COM</a>
-
         <!-- ROW 1: Image left, text right -->
         <div class="epk-row fade-in">
-            <div class="epk-img epk-img-letterbox">
-                <img src="images/Loftet-shoot/PLACEHOLDER-LABEL.jpg" alt="GUT band">
+            <div class="epk-img">
+                <img src="images/GUTUNGEN.jpg" alt="GUT band">
             </div>
             <div class="epk-text">
                 <h2>IDENTITET OG SOUND</h2>
@@ -59,8 +66,8 @@
                 <p>Leggje inn eit støyt på Instagram og TikTok</p>
                 <p>Vi elskar å lage jordnær, smakfull og relaterbar musikk som famnar breitt! Det har vi ambisjonar om å halde fram med. Tekstane spenner frå det banale og attkjennelege, som tankekøyret før ein tør å spørje ut crushet sitt, til det djupt personlege og sårbare, som å miste mora si til kreft, slik vi skildrar i «FIGUREN AV DE». Vi er overtydde om at musikken vår på ein god måte kan treffe ei nerve hos lyttarane.</p>
             </div>
-            <div class="epk-img">
-                <img src="images/GUTUNGEN.jpg" alt="GUT band">
+            <div class="epk-img epk-img-letterbox">
+                <img src="images/Loftet-shoot/PLACEHOLDER-LABEL.jpg" alt="GUT band">
             </div>
         </div>
     </div>
