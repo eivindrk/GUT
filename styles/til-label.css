@@ -88,16 +88,28 @@ html.is-phone .epk-hero .hero-logo {
     padding: 0;
 }
 
+.epk-img {
+    padding: 1.25rem;
+    background-color: var(--color-light);
+}
+
+.epk-row .epk-img:first-child {
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.epk-row .epk-img:last-child {
+    padding-left: 0;
+    padding-top: 0;
+}
+
 .epk-img img.original-colors {
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
 
-.epk-img-letterbox {
-    background-color: #000;
-}
-
 .epk-img-letterbox img {
     object-fit: contain;
+    background-color: #000;
     filter: none;
 }
 
