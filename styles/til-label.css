@@ -107,9 +107,19 @@ html.is-phone .epk-hero .hero-logo {
     filter: saturate(0.42) contrast(0.94) brightness(0.96);
 }
 
-.epk-img-letterbox img {
-    object-fit: contain;
-    background-color: #000;
+.epk-row .epk-img.epk-img-square {
+    align-self: start;
+    height: auto;
+    min-height: 0;
+}
+
+.epk-img-square img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center top;
+    background-color: transparent;
     filter: none;
 }
 
